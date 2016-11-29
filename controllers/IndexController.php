@@ -17,12 +17,12 @@ function testAction() {
  */
 function indexAction($smarty) {
 
-    $rsCategories = getAllMainCatsWithChildren();
-    $rsProducts = getLastProducts(16);
+    $rsCategories = getAllCats();
+    //$rsProducts = getLastProducts(16);
 
     $smarty->assign('pageTitle', 'Главная страница сайта');
     $smarty->assign('rsCategories', $rsCategories);
-    $smarty->assign('rsProducts', $rsProducts);
+    //$smarty->assign('rsProducts', $rsProducts);
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');

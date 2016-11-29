@@ -4,7 +4,7 @@
  */
 
 $dblocation = "127.0.0.1";
-$dbname = "myshop";
+$dbname = "boomcar";
 $dbuser = "root";
 $dbpasswrd = "";
 
