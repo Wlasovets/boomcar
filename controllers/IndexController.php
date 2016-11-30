@@ -6,7 +6,8 @@
 include_once '../models/CategoriesModel.php';
 include_once '../models/ProductsModel.php';
 
-function testAction() {
+function testAction()
+{
     echo 'IndexController.php > testAction';
 }
 
@@ -15,14 +16,15 @@ function testAction() {
  *
  * @param $smarty шаблонизатор
  */
-function indexAction($smarty) {
+function indexAction($smarty)
+{
 
     $rsCategories = getAllCats();
-    //$rsProducts = getLastProducts(16);
+    $rsProducts = getLastProducts(10);
 
     $smarty->assign('pageTitle', 'Главная страница сайта');
     $smarty->assign('rsCategories', $rsCategories);
-    //$smarty->assign('rsProducts', $rsProducts);
+    $smarty->assign('rsProducts', $rsProducts);
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');

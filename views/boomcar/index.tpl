@@ -8,204 +8,27 @@
 
                     <div class="aa-product-catg-body">
                         <ul class="aa-product-catg list">
+
+                            {foreach $rsProducts as $item}
+
                             <!-- start single product item -->
                             <li>
                                 <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
+                                    <a class="aa-product-img" href="/product/{$item['id']}">
+                                        <img src="/images/products/{$item['image']}" alt="product img">
+                                    </a>
                                     <a class="aa-add-card-btn"href="#">do koszyka</a>
                                     <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
                                     <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                                <!-- product badge -->
-                                <span class="aa-badge aa-sale" href="#">SALE!</span>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                                <!-- product badge -->
-                                <span class="aa-badge aa-sold-out" href="#">Sold Out!</span>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
+                                        <h4 class="aa-product-title"><a href="/product/{$item['id']}">{$item['name']}</a></h4>
+                                        <span class="aa-product-price">{$item['price']} zł</span>
+                                        <p class="aa-product-descrip">{$item['description']}</p>
                                     </figcaption>
                                 </figure>
                             </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                                <!-- product badge -->
-                                <span class="aa-badge aa-hot" href="#">HOT!</span>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">o koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                                <!-- product badge -->
-                                <span class="aa-badge aa-sale" href="#">SALE!</span>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                                <!-- product badge -->
-                                <span class="aa-badge aa-sold-out" href="#">Sold Out!</span>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                                <!-- product badge -->
-                                <span class="aa-badge aa-sale" href="#">SALE!</span>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                                <!-- product badge -->
-                                <span class="aa-badge aa-sold-out" href="#">Sold Out!</span>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                                <!-- product badge -->
-                                <span class="aa-badge aa-hot" href="#">HOT!</span>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <!-- start single product item -->
-                            <li>
-                                <figure>
-                                    <a class="aa-product-img" href="#"><img src="{$templateWebPath}img/250x200.gif" alt="polo shirt img"></a>
-                                    <a class="aa-add-card-btn"href="#">do koszyka</a>
-                                    <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
-                                    <figcaption>
-                                        <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
-                                        <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
-                                        <p class="aa-product-descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam accusamus facere iusto, autem soluta amet sapiente ratione inventore nesciunt a, maxime quasi consectetur, rerum illum.</p>
-                                    </figcaption>
-                                </figure>
-                            </li>
+
+                            {/foreach}
+
                         </ul>
 
                     </div>
