@@ -9,7 +9,7 @@ define('PathPostfix', 'Controller.php');
 
 
 //> Используемый шаблон
-$template = 'default';
+$template = 'boomcar';
 
 // Пути к файлам шаблонов
 define('TemplatePrefix', "../views/{$template}/");
