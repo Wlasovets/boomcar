@@ -24,7 +24,7 @@ function indexAction($smarty) {
     $smarty->assign('rsCategories', $rsCategories);
     //$smarty->assign('rsProducts', $rsProducts);
 
-    //loadTemplate($smarty, 'header');
+    loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');
-    //loadTemplate($smarty, 'footer');
+    loadTemplate($smarty, 'footer');
 }
