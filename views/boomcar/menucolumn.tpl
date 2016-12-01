@@ -8,7 +8,7 @@
 
                 <!-- Categories -->
                 {foreach $rsCategories as $item}
-                    <li><a href="#">{$item['name']}</a></li>
+                    <li><a href="/category/{$item['id']}">{$item['name']}</a></li>
                 {/foreach}
 
             </ul>
