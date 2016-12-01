@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-30 18:35:16
+/* Smarty version 3.1.30, created on 2016-12-01 13:20:40
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\menucolumn.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583f0dd470cc66_18724750',
+  'unifunc' => 'content_584015985670b0_95724852',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9d6865ad9e15d5affaeea3234575e79849ed8f4d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\menucolumn.tpl',
-      1 => 1480521775,
+      1 => 1480594776,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583f0dd470cc66_18724750 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584015985670b0_95724852 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
@@ -36,7 +36,8 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-                    <li><a href="#"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+                    <li><a href="/category/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a></li>
                 <?php
 }
