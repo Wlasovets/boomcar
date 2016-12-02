@@ -49,7 +49,6 @@ function d($value = null, $die = 1)
  */
 function createSmartyRsArray($rs)
 {
-
     if (!$rs)
         return false;
 

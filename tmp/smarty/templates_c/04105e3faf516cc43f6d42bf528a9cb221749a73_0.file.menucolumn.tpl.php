@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-01 08:00:19
+/* Smarty version 3.1.30, created on 2016-12-02 12:41:20
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\menucolumn.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583fca83a40830_22509589',
+  'unifunc' => 'content_58415de0989685_75993795',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '04105e3faf516cc43f6d42bf528a9cb221749a73' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\menucolumn.tpl',
-      1 => 1480575608,
+      1 => 1480678847,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583fca83a40830_22509589 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58415de0989685_75993795 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
@@ -37,7 +37,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
                     <li><a href="/category/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+/"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a></li>
                 <?php
 }

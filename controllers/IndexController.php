@@ -22,7 +22,7 @@ function indexAction($smarty)
     $rsCategories = getAllCats();
     $rsProducts = getLastProducts(10);
 
-    $smarty->assign('pageTitle', 'Главная страница сайта');
+    $smarty->assign('pageTitle', 'Produkty');
     $smarty->assign('rsCategories', $rsCategories);
     $smarty->assign('rsProducts', $rsProducts);
 
