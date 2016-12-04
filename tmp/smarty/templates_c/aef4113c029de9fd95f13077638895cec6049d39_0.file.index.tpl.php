@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-30 18:58:28
+/* Smarty version 3.1.30, created on 2016-12-03 13:00:40
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583f1344b9ada5_49898107',
+  'unifunc' => 'content_5842b3e8a165b9_65041637',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aef4113c029de9fd95f13077638895cec6049d39' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\index.tpl',
-      1 => 1480528701,
+      1 => 1480766437,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menucolumn.tpl' => 1,
   ),
 ),false)) {
-function content_583f1344b9ada5_49898107 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5842b3e8a165b9_65041637 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!-- product category -->
@@ -44,16 +44,18 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
                             <li>
                                 <figure>
                                     <a class="aa-product-img" href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-">
+/">
                                         <img src="/images/products/<?php echo $_smarty_tpl->tpl_vars['item']->value['image'];?>
 " alt="product img">
                                     </a>
                                     <a class="aa-add-card-btn"href="#">do koszyka</a>
                                     <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
                                     <figcaption>
-                                        <h4 class="aa-product-title"><a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
-</a></h4>
+                                        <h4 class="aa-product-title">
+                                            <a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+/"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</a>
+                                        </h4>
                                         <span class="aa-product-price"><?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
  zł</span>
                                         <p class="aa-product-descrip"><?php echo $_smarty_tpl->tpl_vars['item']->value['description'];?>

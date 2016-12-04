@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-30 10:46:28
+/* Smarty version 3.1.30, created on 2016-12-03 19:06:42
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_583e9ff4115fc7_19045363',
+  'unifunc' => 'content_584309b2c37dc0_53354226',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd19245ee3d102e1a14ec9917ba23532220f72c32' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\footer.tpl',
-      1 => 1480499143,
+      1 => 1480788396,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_583e9ff4115fc7_19045363 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584309b2c37dc0_53354226 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- footer -->
 <footer id="aa-footer">
@@ -113,42 +113,42 @@ function content_583e9ff4115fc7_19045363 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- jQuery library -->
 <?php echo '<script'; ?>
- src="js/jquery.min.js"><?php echo '</script'; ?>
+ src="/js/jquery.min.js"><?php echo '</script'; ?>
 >
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <?php echo '<script'; ?>
- src="js/bootstrap.js"><?php echo '</script'; ?>
+ src="/js/bootstrap.js"><?php echo '</script'; ?>
 >
 <!-- SmartMenus jQuery plugin -->
 <?php echo '<script'; ?>
- type="text/javascript" src="js/jquery.smartmenus.js"><?php echo '</script'; ?>
+ type="text/javascript" src="/js/jquery.smartmenus.js"><?php echo '</script'; ?>
 >
 <!-- SmartMenus jQuery Bootstrap Addon -->
 <?php echo '<script'; ?>
- type="text/javascript" src="js/jquery.smartmenus.bootstrap.js"><?php echo '</script'; ?>
+ type="text/javascript" src="/js/jquery.smartmenus.bootstrap.js"><?php echo '</script'; ?>
 >
 <!-- Product view slider -->
 <?php echo '<script'; ?>
- type="text/javascript" src="js/jquery.simpleGallery.js"><?php echo '</script'; ?>
+ type="text/javascript" src="/js/jquery.simpleGallery.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- type="text/javascript" src="js/jquery.simpleLens.js"><?php echo '</script'; ?>
+ type="text/javascript" src="/js/jquery.simpleLens.js"><?php echo '</script'; ?>
 >
 <!-- slick slider -->
 <?php echo '<script'; ?>
- type="text/javascript" src="js/slick.js"><?php echo '</script'; ?>
+ type="text/javascript" src="/js/slick.js"><?php echo '</script'; ?>
 >
 <!-- Price picker slider -->
 <?php echo '<script'; ?>
- type="text/javascript" src="js/nouislider.js"><?php echo '</script'; ?>
+ type="text/javascript" src="/js/nouislider.js"><?php echo '</script'; ?>
 >
 
 <!-- Custom js -->
 <?php echo '<script'; ?>
- src="js/custom.js"><?php echo '</script'; ?>
+ src="/js/custom.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="js/addscripts.js"><?php echo '</script'; ?>
+ src="/js/addscripts.js"><?php echo '</script'; ?>
 >
 
 

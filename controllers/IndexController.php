@@ -20,7 +20,7 @@ function indexAction($smarty)
 {
 
     $rsCategories = getAllCats();
-    $rsProducts = getLastProducts(10);
+    $rsProducts = getLastProducts(15);
 
     $smarty->assign('pageTitle', 'Produkty');
     $smarty->assign('rsCategories', $rsCategories);

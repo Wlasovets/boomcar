@@ -14,13 +14,15 @@
                             <!-- start single product item -->
                             <li>
                                 <figure>
-                                    <a class="aa-product-img" href="/product/{$item['id']}">
+                                    <a class="aa-product-img" href="/product/{$item['id']}/">
                                         <img src="/images/products/{$item['image']}" alt="product img">
                                     </a>
                                     <a class="aa-add-card-btn"href="#">do koszyka</a>
                                     <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
                                     <figcaption>
-                                        <h4 class="aa-product-title"><a href="/product/{$item['id']}">{$item['name']}</a></h4>
+                                        <h4 class="aa-product-title">
+                                            <a href="/product/{$item['id']}/">{$item['name']}</a>
+                                        </h4>
                                         <span class="aa-product-price">{$item['price']} zł</span>
                                         <p class="aa-product-descrip">{$item['description']}</p>
                                     </figcaption>
