@@ -8,19 +8,19 @@
                         <div class="row">
                             <!-- Modal view slider -->
                             <div class="col-md-5 col-sm-5 col-xs-12">
-
                                 <div class="aa-product-view-slider">
                                     <div id="demo-1" class="simpleLens-gallery-container">
                                         <div class="simpleLens-container">
                                             <div class="simpleLens-big-image-container">
+
                                                 <a href="/images/products/{$rsProduct['original_image']}" class="simpleLens-lens-image">
                                                     <img width="100%" src="/images/products/{$rsProduct['original_image']}">
                                                 </a>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- Modal view content -->
                             <div class="col-md-7 col-sm-7 col-xs-12">
@@ -34,7 +34,17 @@
                                             Kategorie: <a href="/category/{$rsCategory['id']}/">{$rsCategory['name']}</a>
                                         </p>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>
+                                    <p>Stan:
+
+                                        {if $rsProduct['state'] == 0}
+                                            Używane
+                                        {else}
+                                            Nowe
+                                        {/if}
+
+                                        <br>Producent części: {$rsProducer['name']}
+                                        <br>Marka samochodu: {$rsCarModel['name']}
+                                    </p>
                                     <div class="aa-prod-quantity">
                                         <input type="number" value="1" min="1" max="{$rsProduct['quantity']}" style="width: 50px; padding: 5px">
                                         <p class="aa-prod-category">z {$rsProduct['quantity']} sztuk</p>

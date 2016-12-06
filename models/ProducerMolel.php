@@ -13,7 +13,7 @@ function getProducerById($producerId)
     $producerId = intval($producerId);
 
     $sql = "SELECT *
-            FROM producer
+            FROM producers
             WHERE id = '{$producerId}'";
 
     $rs = mysql_query($sql);

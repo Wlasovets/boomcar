@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-05 15:37:11
+/* Smarty version 3.1.30, created on 2016-12-06 09:30:37
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\product.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58457b97393873_00943413',
+  'unifunc' => 'content_5846772d44aa27_38740229',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '408bd82d7aa829f8c079b8bf2712672910f8802f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\product.tpl',
-      1 => 1480948626,
+      1 => 1481013003,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58457b97393873_00943413 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5846772d44aa27_38740229 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- product category -->
 <section id="aa-product-details">
@@ -32,21 +32,21 @@ function content_58457b97393873_00943413 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="row">
                             <!-- Modal view slider -->
                             <div class="col-md-5 col-sm-5 col-xs-12">
-
                                 <div class="aa-product-view-slider">
                                     <div id="demo-1" class="simpleLens-gallery-container">
                                         <div class="simpleLens-container">
                                             <div class="simpleLens-big-image-container">
+
                                                 <a href="/images/products/<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['original_image'];?>
 " class="simpleLens-lens-image">
                                                     <img width="100%" src="/images/products/<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['original_image'];?>
 ">
                                                 </a>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!-- Modal view content -->
                             <div class="col-md-7 col-sm-7 col-xs-12">
@@ -64,7 +64,19 @@ function content_58457b97393873_00943413 (Smarty_Internal_Template $_smarty_tpl)
 </a>
                                         </p>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>
+                                    <p>Stan:
+
+                                        <?php if ($_smarty_tpl->tpl_vars['rsProduct']->value['state'] == 0) {?>
+                                            Używane
+                                        <?php } else { ?>
+                                            Nowe
+                                        <?php }?>
+                                        
+                                        <br>Producent części: <?php echo $_smarty_tpl->tpl_vars['rsProducer']->value['name'];?>
+
+                                        <br>Marka samochodu: <?php echo $_smarty_tpl->tpl_vars['rsCarModel']->value['name'];?>
+
+                                    </p>
                                     <div class="aa-prod-quantity">
                                         <input type="number" value="1" min="1" max="<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['quantity'];?>
 " style="width: 50px; padding: 5px">

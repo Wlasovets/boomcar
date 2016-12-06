@@ -14,7 +14,7 @@ function getCarModelById($carModelId)
     $carModelId = intval($carModelId);
 
     $sql = "SELECT *
-            FROM producer
+            FROM car_models
             WHERE id = '{$carModelId}'";
 
     $rs = mysql_query($sql);
