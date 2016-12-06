@@ -24,7 +24,18 @@
                                             <a href="/product/{$item['id']}/">{$item['name']}</a>
                                         </h4>
                                         <span class="aa-product-price">{$item['price']} zł</span>
-                                        <p class="aa-product-descrip">{$item['description']}</p>
+                                        <p class="aa-product-descrip">
+
+                                            {if $item['state'] = 0}
+                                                Stan: Używane <br>
+                                            {else}
+                                                Stan: Nowe <br>
+                                            {/if}
+
+                                            Kategorie: {$item['categoryName']} <br>
+                                            Producent części: {$item['producerName']} <br>
+                                            Marka samochodu: {$item['carModelName']}
+                                        </p>
                                     </figcaption>
                                 </figure>
                             </li>

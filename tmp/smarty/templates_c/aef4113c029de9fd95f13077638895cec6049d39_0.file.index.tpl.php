@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-03 13:00:40
+/* Smarty version 3.1.30, created on 2016-12-06 17:45:31
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5842b3e8a165b9_65041637',
+  'unifunc' => 'content_5846eb2bdb3f18_91866599',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aef4113c029de9fd95f13077638895cec6049d39' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\index.tpl',
-      1 => 1480766437,
+      1 => 1481042729,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menucolumn.tpl' => 1,
   ),
 ),false)) {
-function content_5842b3e8a165b9_65041637 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5846eb2bdb3f18_91866599 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!-- product category -->
@@ -58,8 +58,27 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
                                         </h4>
                                         <span class="aa-product-price"><?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
  zł</span>
-                                        <p class="aa-product-descrip"><?php echo $_smarty_tpl->tpl_vars['item']->value['description'];?>
-</p>
+                                        <p class="aa-product-descrip">
+
+                                            <?php $_tmp_array = isset($_smarty_tpl->tpl_vars['item']) ? $_smarty_tpl->tpl_vars['item']->value : array();
+if (!is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess) {
+settype($_tmp_array, 'array');
+}
+$_tmp_array['state'] = 0;
+$_smarty_tpl->_assignInScope('item', $_tmp_array);
+if (0) {?>
+                                                Stan: Używane <br>
+                                            <?php } else { ?>
+                                                Stan: Nowe <br>
+                                            <?php }?>
+
+                                            Kategorie: <?php echo $_smarty_tpl->tpl_vars['item']->value['categoryName'];?>
+ <br>
+                                            Producent części: <?php echo $_smarty_tpl->tpl_vars['item']->value['producerName'];?>
+ <br>
+                                            Marka samochodu: <?php echo $_smarty_tpl->tpl_vars['item']->value['carModelName'];?>
+
+                                        </p>
                                     </figcaption>
                                 </figure>
                             </li>

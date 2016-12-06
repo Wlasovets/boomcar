@@ -18,7 +18,6 @@ function testAction()
  */
 function indexAction($smarty)
 {
-
     $rsCategories = getAllCats();
     $rsProducts = getLastProducts(15);
 
