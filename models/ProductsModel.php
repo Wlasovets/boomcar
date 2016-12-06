@@ -12,8 +12,14 @@
  */
 function getLastProducts($limit = null)
 {
-    $sql = "SELECT *
-            FROM `products`
+    $sql = "SELECT products.name AS name, car_models.name AS carModelName, producers.name AS producerName,
+            products.description, products.image, products.price, products.car_model_id, products.category_id,
+            products.id, products.original_image, products.producer_id, products.quantity, products.state, products.status
+            FROM products
+            LEFT JOIN car_models
+            ON products.car_model_id = car_models.id
+            LEFT JOIN producers
+            ON products.producer_id = producers.id
             ORDER BY id DESC";
 
     if ($limit) {

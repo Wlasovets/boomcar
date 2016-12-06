@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 09:30:37
+/* Smarty version 3.1.30, created on 2016-12-06 09:37:43
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\product.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5846772d44aa27_38740229',
+  'unifunc' => 'content_584678d790f560_32549674',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '408bd82d7aa829f8c079b8bf2712672910f8802f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\product.tpl',
-      1 => 1481013003,
+      1 => 1481013119,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5846772d44aa27_38740229 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584678d790f560_32549674 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- product category -->
 <section id="aa-product-details">
@@ -71,7 +71,7 @@ function content_5846772d44aa27_38740229 (Smarty_Internal_Template $_smarty_tpl)
                                         <?php } else { ?>
                                             Nowe
                                         <?php }?>
-                                        
+
                                         <br>Producent części: <?php echo $_smarty_tpl->tpl_vars['rsProducer']->value['name'];?>
 
                                         <br>Marka samochodu: <?php echo $_smarty_tpl->tpl_vars['rsCarModel']->value['name'];?>
