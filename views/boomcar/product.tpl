@@ -1,5 +1,5 @@
 <!-- product category -->
-<section id="aa-product-details">
+<section id="aa-product-details" style="min-height: calc(100vh - 320px)">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -62,12 +62,11 @@
                             <li><h4>Opis</h4></li>
                         </ul>
                         <!-- Tab panes -->
-                        <div class="tab-content">
+                        <div class="tab-content" style="min-height: 90px">
                             <div class="tab-pane fade in active" id="description">
                                 <p>{$rsProduct['description']}</p>
                             </div>
                         </div>
-                        <hr>
                     </div>
                 </div>
             </div>

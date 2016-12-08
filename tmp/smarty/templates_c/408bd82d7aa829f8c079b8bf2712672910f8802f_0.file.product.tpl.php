@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-06 09:37:43
+/* Smarty version 3.1.30, created on 2016-12-08 08:41:28
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\product.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_584678d790f560_32549674',
+  'unifunc' => 'content_58490ea8b34a70_86111196',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '408bd82d7aa829f8c079b8bf2712672910f8802f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\product.tpl',
-      1 => 1481013119,
+      1 => 1481182886,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_584678d790f560_32549674 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58490ea8b34a70_86111196 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- product category -->
-<section id="aa-product-details">
+<section id="aa-product-details" style="min-height: calc(100vh - 320px)">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -96,13 +96,12 @@ function content_584678d790f560_32549674 (Smarty_Internal_Template $_smarty_tpl)
                             <li><h4>Opis</h4></li>
                         </ul>
                         <!-- Tab panes -->
-                        <div class="tab-content">
+                        <div class="tab-content" style="min-height: 90px">
                             <div class="tab-pane fade in active" id="description">
                                 <p><?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['description'];?>
 </p>
                             </div>
                         </div>
-                        <hr>
                     </div>
                 </div>
             </div>

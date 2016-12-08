@@ -41,9 +41,16 @@ function getLastProducts($limit = null)
 function getProductsByCat($itemId)
 {
     $itemId = intval($itemId);
-    $sql = "SELECT *
+    $sql = "SELECT products.name AS name, car_models.name AS carModelName,
+            producers.name AS producerName, categories.name AS categoryName,
+            products.description, products.image, products.price, products.car_model_id,
+            products.category_id, products.id, products.original_image, products.producer_id,
+            products.quantity, products.state, products.status
             FROM products
-            WHERE category_id = '{$itemId}'";
+            LEFT JOIN car_models ON products.car_model_id = car_models.id
+            LEFT JOIN producers ON products.producer_id = producers.id
+            LEFT JOIN  categories ON products.category_id = categories.id
+            WHERE products.category_id = '{$itemId}'";
 
     $rs = mysql_query($sql);
 
