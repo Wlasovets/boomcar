@@ -50,7 +50,7 @@
                                         <p class="aa-prod-category">z {$rsProduct['quantity']} sztuk</p>
                                     </div>
                                     <div class="aa-prod-view-bottom">
-                                        <a class="aa-add-to-cart-btn" href="#">do koszyka</a>
+                                        <a id="addCart_{$rsProduct['id']}" onclick="addToCart({$rsProduct['id']}); return false" class="aa-add-to-cart-btn" href="#">do koszyka</a>
                                         <a class="aa-add-to-cart-btn" href="#">kup teraz</a>
                                     </div>
                                 </div>
