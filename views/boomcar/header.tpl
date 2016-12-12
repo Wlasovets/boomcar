@@ -110,7 +110,7 @@
                             <a class="aa-cart-link" href="#">
                                 <span class="fa fa-shopping-basket"></span>
                                 <span class="aa-cart-title">Koszyk</span>
-                                <span class="aa-cart-notify">2</span>
+                                <span id="cartCntItems" class="aa-cart-notify">{$cartCntItems}</span>
                             </a>
                         </div>
                         <!-- / cart box -->

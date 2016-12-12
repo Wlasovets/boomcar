@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-08 08:41:28
+/* Smarty version 3.1.30, created on 2016-12-12 15:00:06
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\product.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58490ea8b34a70_86111196',
+  'unifunc' => 'content_584ead66dd40a9_76204972',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '408bd82d7aa829f8c079b8bf2712672910f8802f' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\product.tpl',
-      1 => 1481182886,
+      1 => 1481373917,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58490ea8b34a70_86111196 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584ead66dd40a9_76204972 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- product category -->
 <section id="aa-product-details" style="min-height: calc(100vh - 320px)">
@@ -84,7 +84,9 @@ function content_58490ea8b34a70_86111196 (Smarty_Internal_Template $_smarty_tpl)
  sztuk</p>
                                     </div>
                                     <div class="aa-prod-view-bottom">
-                                        <a class="aa-add-to-cart-btn" href="#">do koszyka</a>
+                                        <a id="addCart_<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
+" onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
+); return false" class="aa-add-to-cart-btn" href="#">do koszyka</a>
                                         <a class="aa-add-to-cart-btn" href="#">kup teraz</a>
                                     </div>
                                 </div>

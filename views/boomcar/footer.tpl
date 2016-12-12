@@ -106,6 +106,7 @@
 <!-- Custom js -->
 <script src="/js/custom.js"></script>
 <script src="/js/addscripts.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
 
 
 </body>
