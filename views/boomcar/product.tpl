@@ -50,7 +50,8 @@
                                         <p class="aa-prod-category">z {$rsProduct['quantity']} sztuk</p>
                                     </div>
                                     <div class="aa-prod-view-bottom">
-                                        <a id="addCart_{$rsProduct['id']}" onclick="addToCart({$rsProduct['id']}); return false" class="aa-add-to-cart-btn" href="#">do koszyka</a>
+                                        <a id="addCart_{$rsProduct['id']}" href="#" onclick="addToCart({$rsProduct['id']}); return false" class="aa-add-to-cart-btn" alt="do koszyka">do koszyka</a>
+                                        <a id="removeCart_{$rsProduct['id']}" href="#" onclick="removeFromCart({$rsProduct['id']}); return false" class="aa-add-to-cart-btn" alt="z koszyka">z koszyka</a>
                                         <a class="aa-add-to-cart-btn" href="#">kup teraz</a>
                                     </div>
                                 </div>

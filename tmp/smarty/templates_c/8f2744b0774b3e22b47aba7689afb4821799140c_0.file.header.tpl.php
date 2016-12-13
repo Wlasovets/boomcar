@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-03 18:57:01
+/* Smarty version 3.1.30, created on 2016-12-12 16:19:32
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5843076d1cad69_63021354',
+  'unifunc' => 'content_584ec0043db505_02477768',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8f2744b0774b3e22b47aba7689afb4821799140c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\header.tpl',
-      1 => 1480787817,
+      1 => 1481555945,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5843076d1cad69_63021354 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584ec0043db505_02477768 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!DOCTYPE html>
@@ -147,37 +147,9 @@ css/addStyle.css" rel="stylesheet">
                             <a class="aa-cart-link" href="#">
                                 <span class="fa fa-shopping-basket"></span>
                                 <span class="aa-cart-title">Koszyk</span>
-                                <span class="aa-cart-notify">2</span>
+                                <span id="cartCntItems" class="aa-cart-notify"><?php echo $_smarty_tpl->tpl_vars['cartCntItems']->value;?>
+</span>
                             </a>
-                            <div class="aa-cartbox-summary">
-                                <ul>
-                                    <li>
-                                        <a class="aa-cartbox-img" href="#"><img src="images/products/product-small-2.jpg" alt="img"></a>
-                                        <div class="aa-cartbox-info">
-                                            <h4><a href="#">Product Name</a></h4>
-                                            <p>1 x $250</p>
-                                        </div>
-                                        <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                                    </li>
-                                    <li>
-                                        <a class="aa-cartbox-img" href="#"><img src="images/products/product-small-1.jpg" alt="img"></a>
-                                        <div class="aa-cartbox-info">
-                                            <h4><a href="#">Product Name</a></h4>
-                                            <p>1 x $250</p>
-                                        </div>
-                                        <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                                    </li>
-                                    <li>
-                      <span class="aa-cartbox-total-title">
-                        Total
-                      </span>
-                                        <span class="aa-cartbox-total-price">
-                        $500
-                      </span>
-                                    </li>
-                                </ul>
-                                <a class="aa-cartbox-checkout aa-primary-btn" href="#">Checkout</a>
-                            </div>
                         </div>
                         <!-- / cart box -->
                         <!-- search box -->

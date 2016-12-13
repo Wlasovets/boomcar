@@ -18,15 +18,39 @@ function addtocartAction()
     $resData = array();
 
     // Если товара в корзине нет, то добавляем его
-    if ($_SESSION['cart'] && array_search($itemId, $_SESSION['cart']) === false) {
+    if (isset($_SESSION['cart']) && array_search($itemId, $_SESSION['cart']) === false) {
 
         $_SESSION['cart'][] = $itemId;
         $resData['cntItems'] = count($_SESSION['cart']);
         $resData['success'] = 1;
-    }
-    else {
+    } else {
         $resData['success'] = 0;
     }
 
-    return json_encode($resData);
+    echo json_encode($resData);
+}
+
+/**
+ * Удаление продукта из корзины
+ *
+ * @param int id GET параметр - ID удаляемого из корзины продукта
+ * @return json - информация об операции (успех, количество элементов в корзине)
+ */
+function removefromcartAction()
+{
+    $itemId = isset($_GET['id']) ? intval($_GET['id']) : null;
+    if (!$itemId) exit();
+
+    $resData = array();
+    $key = array_search($itemId, $_SESSION['cart']);
+
+    if ($key !== false) {
+        unset($_SESSION['cart'][$key]);
+        $resData['success'] = 1;
+        $resData['cntItems'] = count($_SESSION['cart']);
+    } else {
+        $resData['success'] = 0;
+    }
+
+    echo json_encode($resData);
 }

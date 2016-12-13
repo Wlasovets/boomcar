@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-03 19:06:42
+/* Smarty version 3.1.30, created on 2016-12-12 16:19:33
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_584309b2c37dc0_53354226',
+  'unifunc' => 'content_584ec0057a4585_07679342',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd19245ee3d102e1a14ec9917ba23532220f72c32' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\footer.tpl',
-      1 => 1480788396,
+      1 => 1481555945,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_584309b2c37dc0_53354226 (Smarty_Internal_Template $_smarty_tpl) {
+function content_584ec0057a4585_07679342 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- footer -->
 <footer id="aa-footer">
@@ -149,6 +149,9 @@ function content_584309b2c37dc0_53354226 (Smarty_Internal_Template $_smarty_tpl)
 >
 <?php echo '<script'; ?>
  src="/js/addscripts.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript" src="/js/main.js"><?php echo '</script'; ?>
 >
 
 

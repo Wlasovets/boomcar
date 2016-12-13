@@ -2,7 +2,7 @@
 session_start(); // Стартуем сессию
 
 // Если в сессии нет массива корзины то создаем его
-if (isset($_SESSION['cart'])) {
+if (! isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
 
