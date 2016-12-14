@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-12 14:52:53
+/* Smarty version 3.1.30, created on 2016-12-14 14:04:01
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_584eabb5393876_97033994',
+  'unifunc' => 'content_585143414c4b44_23360695',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '830fd3eebd3dddf2888ceb7e79013bb8224d7526' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\index.tpl',
-      1 => 1481374428,
+      1 => 1481720524,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menucolumn.tpl' => 1,
   ),
 ),false)) {
-function content_584eabb5393876_97033994 (Smarty_Internal_Template $_smarty_tpl) {
+function content_585143414c4b44_23360695 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!-- product category -->
@@ -49,8 +49,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 " alt="product img">
                                     </a>
                                     <a id="addCart_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-" onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" <?php if ($_smarty_tpl->tpl_vars['item']->value['itemInCart']) {?> style="display: none;" <?php }?> onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 ); return false" class="aa-add-card-btn" href="#">do koszyka</a>
+                                    <a id="removeCart_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" <?php if (!$_smarty_tpl->tpl_vars['item']->value['itemInCart']) {?> style="display: none;" <?php }?> onclick="removeFromCart(<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+); return false" class="aa-add-card-btn" href="#">z koszyka</a>
                                     <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
                                     <figcaption>
                                         <h4 class="aa-product-title">
