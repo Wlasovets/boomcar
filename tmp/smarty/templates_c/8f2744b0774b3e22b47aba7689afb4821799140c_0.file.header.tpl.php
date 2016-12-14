@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-12 16:19:32
+/* Smarty version 3.1.30, created on 2016-12-14 18:54:40
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_584ec0043db505_02477768',
+  'unifunc' => 'content_58518760ba61d7_61591979',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8f2744b0774b3e22b47aba7689afb4821799140c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\header.tpl',
-      1 => 1481555945,
+      1 => 1481738041,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_584ec0043db505_02477768 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58518760ba61d7_61591979 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!DOCTYPE html>
@@ -144,7 +144,7 @@ css/addStyle.css" rel="stylesheet">
                         <!-- / logo  -->
                         <!-- cart box -->
                         <div class="aa-cartbox">
-                            <a class="aa-cart-link" href="#">
+                            <a class="aa-cart-link" href="/cart/">
                                 <span class="fa fa-shopping-basket"></span>
                                 <span class="aa-cart-title">Koszyk</span>
                                 <span id="cartCntItems" class="aa-cart-notify"><?php echo $_smarty_tpl->tpl_vars['cartCntItems']->value;?>
