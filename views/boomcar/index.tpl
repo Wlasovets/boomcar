@@ -18,6 +18,7 @@
                                         <img src="/images/products/{$item['image']}" alt="product img">
                                     </a>
                                     <a id="addCart_{$item['id']}" onclick="addToCart({$item['id']}); return false" class="aa-add-card-btn" href="#">do koszyka</a>
+                                    <a id="removeCart_{$item['id']}" onclick="removeFromCart({$item['id']}); return false" class="aa-add-card-btn" href="#">z koszyka</a>
                                     <a class="aa-add-card-btn bay-btn"href="#">kup teraz</a>
                                     <figcaption>
                                         <h4 class="aa-product-title">

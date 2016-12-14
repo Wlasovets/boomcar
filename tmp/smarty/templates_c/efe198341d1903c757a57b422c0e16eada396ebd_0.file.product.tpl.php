@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-13 19:08:59
+/* Smarty version 3.1.30, created on 2016-12-14 10:50:17
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\product.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5850393b88bc27_94803817',
+  'unifunc' => 'content_585115d97a36f9_59855795',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'efe198341d1903c757a57b422c0e16eada396ebd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\product.tpl',
-      1 => 1481636974,
+      1 => 1481709004,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5850393b88bc27_94803817 (Smarty_Internal_Template $_smarty_tpl) {
+function content_585115d97a36f9_59855795 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- product category -->
 <section id="aa-product-details" style="min-height: calc(100vh - 320px)">
@@ -85,10 +85,10 @@ function content_5850393b88bc27_94803817 (Smarty_Internal_Template $_smarty_tpl)
                                     </div>
                                     <div class="aa-prod-view-bottom">
                                         <a id="addCart_<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
-" href="#" onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
+" <?php if ($_smarty_tpl->tpl_vars['itemInCart']->value) {?> style="display: none" <?php }?> href="#" onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
 ); return false" class="aa-add-to-cart-btn" alt="do koszyka">do koszyka</a>
                                         <a id="removeCart_<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
-" href="#" onclick="removeFromCart(<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
+" <?php if (!$_smarty_tpl->tpl_vars['itemInCart']->value) {?> style="display: none" <?php }?> href="#" onclick="removeFromCart(<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
 ); return false" class="aa-add-to-cart-btn" alt="z koszyka">z koszyka</a>
                                         <a class="aa-add-to-cart-btn" href="#">kup teraz</a>
                                     </div>
