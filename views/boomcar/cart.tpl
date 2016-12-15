@@ -1,5 +1,5 @@
 <!-- Cart view section -->
-<section id="cart-view">
+<section id="cart-view" style="min-height: calc(100vh - 320px)">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -18,40 +18,30 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+
+                                    {foreach $rsProducts as $item}
+
                                     <tr>
-                                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                                        <td>$250</td>
-                                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                                        <td>$250</td>
+                                        <td>
+                                            <a id="removeCart_{$item['id']}" onclick="removeFromCart({$item['id']}); return false;" class="aa-cart-title" href="#">z koszyka</a>
+                                            <a id="addCart_{$item['id']}" onclick="addToCart({$item['id']}); return false;" class="aa-cart-title" style="display: none;" href="#">do koszyka</a>
+                                        </td>
+                                        <td><a class="aa-cart-title" href="/product/{$item['id']}/">{$item['name']}</a></td>
+                                        <td><span id="itemPrice_{$item['id']}" value="{$item['price']}">{$item['price']}</span> zł</td>
+                                        <td><input name="itemCnt_{$item['id']}" id="itemCnt_{$item['id']}" class="aa-cart-quantity" type="number" value="1" min="1" max="{$item['quantity']}" onchange="conversionPrice({$item['id']});"></td>
+                                        <td><span id="itemRealPrice_{$item['id']}">{$item['price']}</span> zł</td>
                                     </tr>
-                                    <tr>
-                                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                                        <td>$150</td>
-                                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                                        <td>$150</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                                        <td>$50</td>
-                                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                                        <td>$50</td>
-                                    </tr>
+
+                                    {/foreach}
+
                                     </tbody>
                                 </table>
                             </div>
                         </form>
                         <!-- Cart Total view -->
                         <div class="cart-view-total">
-                            <h4>Cart Totals</h4>
                             <table class="aa-totals-table">
                                 <tbody>
-                                <tr>
-                                    <th>Subtotal</th>
-                                    <td>$450</td>
-                                </tr>
                                 <tr>
                                     <th>Total</th>
                                     <td>$450</td>
