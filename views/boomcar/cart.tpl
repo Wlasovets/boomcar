@@ -26,10 +26,10 @@
                                             <a id="removeCart_{$item['id']}" onclick="removeFromCart({$item['id']}); return false;" class="aa-cart-title" href="#">z koszyka</a>
                                             <a id="addCart_{$item['id']}" onclick="addToCart({$item['id']}); return false;" class="aa-cart-title" style="display: none;" href="#">do koszyka</a>
                                         </td>
-                                        <td><a class="aa-cart-title" href="/product/{$item['id']}/">{$item['name']}</a></td>
+                                        <td><a id="productName_{$item['id']}" class="aa-cart-title" href="/product/{$item['id']}/">{$item['name']}</a></td>
                                         <td><span id="itemPrice_{$item['id']}" value="{$item['price']}">{$item['price']}</span> zł</td>
                                         <td><input name="itemCnt_{$item['id']}" id="itemCnt_{$item['id']}" class="aa-cart-quantity" type="number" value="1" min="1" max="{$item['quantity']}" onchange="conversionPrice({$item['id']});"></td>
-                                        <td><span id="itemRealPrice_{$item['id']}">{$item['price']}</span> zł</td>
+                                        <td><span id="itemRealPrice_{$item['id']}" value="{$item['price']}">{$item['price']}</span> zł</td>
                                     </tr>
 
                                     {/foreach}
@@ -44,7 +44,7 @@
                                 <tbody>
                                 <tr>
                                     <th>Total</th>
-                                    <td>$450</td>
+                                    <td><span id="totalCostId" value="{$totalCost}">{$totalCost}</span> zł</td>
                                 </tr>
                                 </tbody>
                             </table>

@@ -17,6 +17,14 @@ function addToCart(itemId) {
                 $('#cartCntItems').html(data['cntItems']);
                 $('#addCart_' + itemId).hide();
                 $('#removeCart_' + itemId).show();
+
+                //Изменение свойств страницы корзины при добавлении товара
+                $('#productName_' + itemId).css('text-decoration', 'none');
+                var itemRealPrice = $('#itemRealPrice_' + itemId).attr('value');
+                var totalCost = $('#totalCostId').attr('value');
+                totalCost = Number(totalCost) + Number(itemRealPrice);
+                $('#totalCostId').html(totalCost);
+                $('#totalCostId').attr('value', totalCost);
             }
         }
     });
@@ -41,6 +49,14 @@ function removeFromCart(itemId) {
                 $('#cartCntItems').html(data['cntItems']);
                 $('#addCart_' + itemId).show();
                 $('#removeCart_' + itemId).hide();
+
+                //Изменение свойств страницы корзины при удалении товара
+                $('#productName_' + itemId).css('text-decoration', 'line-through');
+                var itemRealPrice = $('#itemRealPrice_' + itemId).attr('value');
+                var totalCost = $('#totalCostId').attr('value');
+                totalCost = Number(totalCost) - Number(itemRealPrice);
+                $('#totalCostId').html(totalCost);
+                $('#totalCostId').attr('value', totalCost);
             }
         }
     });
@@ -58,4 +74,5 @@ function conversionPrice(itemId) {
     var itemRealPrice = newCnt * itemPrice;
 
     $('#itemRealPrice_' + itemId).html(itemRealPrice);
+    $('#itemRealPrice_' + itemId).attr('value', itemRealPrice);
 }

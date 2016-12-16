@@ -66,9 +66,15 @@ function indexAction($smarty)
     $itemsIds = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 
     $rsProducts = getProductsFromArray($itemsIds);
+    $totalCost = 0;
+
+    foreach ($rsProducts as $product) {
+        $totalCost += $product['price'];
+    }
 
     $smarty->assign('Page Title', 'Koszyk');
     $smarty->assign('rsProducts', $rsProducts);
+    $smarty->assign('totalCost', $totalCost);
 
     loadTemplate($smarty, 'header');
     LoadTemplate($smarty, 'cart');
