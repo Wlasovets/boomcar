@@ -63,13 +63,18 @@ function removefromcartAction()
  */
 function indexAction($smarty)
 {
-    $itemsIds = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
-
-    $rsProducts = getProductsFromArray($itemsIds);
     $totalCost = 0;
+    $rsProducts = array();
 
-    foreach ($rsProducts as $product) {
-        $totalCost += $product['price'];
+    // Получение товаров по их ID и подсчет общей стоимости товаров в корзине
+    if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+
+        $itemsIds = $_SESSION['cart'];
+        $rsProducts = getProductsFromArray($itemsIds);
+
+        foreach ($rsProducts as $product) {
+            $totalCost += $product['price'];
+        }
     }
 
     $smarty->assign('Page Title', 'Koszyk');
