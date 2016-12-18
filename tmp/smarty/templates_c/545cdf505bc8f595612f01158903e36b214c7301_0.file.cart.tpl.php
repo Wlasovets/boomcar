@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-15 19:53:22
+/* Smarty version 3.1.30, created on 2016-12-18 10:51:09
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\cart.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5852e6a2638c82_11630446',
+  'unifunc' => 'content_58565c0d054d39_42880447',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '545cdf505bc8f595612f01158903e36b214c7301' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\cart.tpl',
-      1 => 1481827998,
+      1 => 1482054659,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5852e6a2638c82_11630446 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58565c0d054d39_42880447 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="cart-view" style="min-height: calc(100vh - 320px)">
@@ -58,8 +58,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 " onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 ); return false;" class="aa-cart-title" style="display: none;" href="#">do koszyka</a>
                                         </td>
-                                        <td><a class="aa-cart-title" href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-/"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+                                        <td><a id="productName_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" class="aa-cart-title" href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+/" deleted="false"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a></td>
                                         <td><span id="itemPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
@@ -67,11 +68,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 </span> zł</td>
                                         <td><input name="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " id="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-" class="aa-cart-quantity" type="number" value="1" min="1" max="<?php echo $_smarty_tpl->tpl_vars['item']->value['quantity'];?>
+" class="aa-cart-quantity" type="number" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['customQuantity'];?>
+" min="1" max="<?php echo $_smarty_tpl->tpl_vars['item']->value['quantity'];?>
 " onchange="conversionPrice(<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 );"></td>
                                         <td><span id="itemRealPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['realPrice'];?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value['realPrice'];?>
 </span> zł</td>
                                     </tr>
 
@@ -92,7 +95,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                 <tbody>
                                 <tr>
                                     <th>Total</th>
-                                    <td>$450</td>
+                                    <td><span id="totalCostId" value="<?php echo $_smarty_tpl->tpl_vars['totalCost']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['totalCost']->value;?>
+</span> zł</td>
                                 </tr>
                                 </tbody>
                             </table>

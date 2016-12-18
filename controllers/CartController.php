@@ -15,6 +15,9 @@ function addtocartAction()
     $itemId = isset($_GET['id']) ? intval($_GET['id']) : null;
     if (!$itemId) return false;
 
+    // Количество товара, которое указал пользователь на странице продукта
+    $itemQuantity = isset($_POST['quantity']) ? intval($_POST['quantity']) : 1;
+
     $resData = array();
 
     // Если товара в корзине нет, то добавляем его
@@ -22,6 +25,7 @@ function addtocartAction()
 
         $_SESSION['cart'][] = $itemId;
         $resData['cntItems'] = count($_SESSION['cart']);
+        $_SESSION['productQuantities'][$itemId] = $itemQuantity;
         $resData['success'] = 1;
     } else {
         $resData['success'] = 0;
@@ -46,6 +50,7 @@ function removefromcartAction()
 
     if ($key !== false) {
         unset($_SESSION['cart'][$key]);
+        unset($_SESSION['productQuantities'][$itemId]);
         $resData['success'] = 1;
         $resData['cntItems'] = count($_SESSION['cart']);
     } else {
@@ -71,11 +76,19 @@ function indexAction($smarty)
 
         $itemsIds = $_SESSION['cart'];
         $rsProducts = getProductsFromArray($itemsIds);
+        $customQuantities = $_SESSION['productQuantities'];
 
-        foreach ($rsProducts as $product) {
-            $totalCost += $product['price'];
+        // Обращаемся к массиву по ссылке (&$product), для того, что бы можно было изменять значения массива
+        foreach ($rsProducts as &$product) {
+
+            $product['customQuantity'] = $customQuantities[$product['id']];
+            $product['realPrice'] = $product['customQuantity'] * $product['price'];
+            $totalCost += ($product['customQuantity'] * $product['price']);
         }
+        // Уничтожаем ссылку, т.к. после цикла она установилась на последний элемент
+        unset($product);
     }
+
 
     $smarty->assign('Page Title', 'Koszyk');
     $smarty->assign('rsProducts', $rsProducts);

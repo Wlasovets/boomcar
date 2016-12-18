@@ -71,7 +71,7 @@
 
                             <!-- start cellphone -->
                             <div class="cellphone">
-                                <p><span class="fa fa-phone"></span>+48-570-537-162</p>
+                                <p><span class="fa fa-phone"></span>+48-577-344-611</p>
                             </div>
                             <!-- / cellphone -->
                         </div>

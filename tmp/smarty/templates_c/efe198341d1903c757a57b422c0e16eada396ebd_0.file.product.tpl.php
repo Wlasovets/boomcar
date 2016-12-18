@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-14 10:50:17
+/* Smarty version 3.1.30, created on 2016-12-16 19:32:13
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\product.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_585115d97a36f9_59855795',
+  'unifunc' => 'content_5854332d828d87_70780121',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'efe198341d1903c757a57b422c0e16eada396ebd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\product.tpl',
-      1 => 1481709004,
+      1 => 1481913075,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_585115d97a36f9_59855795 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5854332d828d87_70780121 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- product category -->
 <section id="aa-product-details" style="min-height: calc(100vh - 320px)">
@@ -78,7 +78,8 @@ function content_585115d97a36f9_59855795 (Smarty_Internal_Template $_smarty_tpl)
 
                                     </p>
                                     <div class="aa-prod-quantity">
-                                        <input type="number" value="1" min="1" max="<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['quantity'];?>
+                                        <input id="productQuantity_<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['id'];?>
+" type="number" value="1" min="1" max="<?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['quantity'];?>
 " style="width: 50px; padding: 5px">
                                         <p class="aa-prod-category">z <?php echo $_smarty_tpl->tpl_vars['rsProduct']->value['quantity'];?>
  sztuk</p>

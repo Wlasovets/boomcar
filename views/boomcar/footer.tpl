@@ -17,7 +17,7 @@
                             <div class="col-md-3 col-sm-6">
                                 <div class="aa-footer-widget">
                                     <address>
-                                        <p><span class="fa fa-phone"></span>+48-570-537-162</p>
+                                        <p><span class="fa fa-phone"></span>+48-577-344-611</p>
                                     </address>
                                 </div>
                             </div>
