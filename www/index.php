@@ -6,6 +6,10 @@ if (! isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
 
+if (! isset($_SESSION['productQuantities'])) {
+    $_SESSION['productQuantities'] = array();
+}
+
 include_once '../config/config.php';            // Инициализация настроек
 include_once '../config/db.php';                // Инициализация БД
 include_once '../library/mainFunctions.php';    // Основные функции
