@@ -10,7 +10,7 @@ function addToCart(itemId) {
         type: 'POST',
         async: false,
         url: "/cart/addtocart/" + itemId + '/',
-        data: {quantity: $('#productQuantity_' + itemId).val()},
+        data: {quantity: $('#itemCnt_' + itemId).val()},
         dataType: 'json',
         success: function (data) {
 
@@ -21,9 +21,10 @@ function addToCart(itemId) {
 
                 //Изменение свойств страницы корзины при добавлении товара
                 $('#productName_' + itemId).css('text-decoration', 'none');
-                var itemRealPrice = $('#itemRealPrice_' + itemId).attr('value');
-                var totalCost = $('#totalCostId').attr('value');
-                totalCost = ((totalCost * 100) + (itemRealPrice * 100)) / 100;
+                var itemRealPrice = Number($('#itemRealPrice_' + itemId).attr('value'));
+                var totalCost = Number($('#totalCostId').attr('value'));
+                totalCost = totalCost + itemRealPrice;
+                totalCost = Math.round(totalCost * 1000) / 1000;
                 $('#totalCostId').html(totalCost);
                 $('#totalCostId').attr('value', totalCost);
 
@@ -55,9 +56,10 @@ function removeFromCart(itemId) {
 
                 //Изменение свойств страницы корзины при удалении товара
                 $('#productName_' + itemId).css('text-decoration', 'line-through');
-                var itemRealPrice = $('#itemRealPrice_' + itemId).attr('value');
-                var totalCost = $('#totalCostId').attr('value');
-                totalCost = ((totalCost * 100) - (itemRealPrice * 100)) / 100;
+                var itemRealPrice = Number($('#itemRealPrice_' + itemId).attr('value'));
+                var totalCost = Number($('#totalCostId').attr('value'));
+                totalCost = totalCost - itemRealPrice;
+                totalCost = Math.round(totalCost * 1000) / 1000;
                 $('#totalCostId').html(totalCost);
                 $('#totalCostId').attr('value', totalCost);
 
@@ -75,15 +77,15 @@ function removeFromCart(itemId) {
 function conversionPrice(itemId) {
 
     // Вычесляем общую стоимость отдельного товара
-    var newCnt = $('#itemCnt_' + itemId).val();
-    var itemPrice = $('#itemPrice_' + itemId).attr('value');
+    var newCnt = Number($('#itemCnt_' + itemId).val());
+    var itemPrice = Number($('#itemPrice_' + itemId).attr('value'));
     var newRealPrice = (newCnt * (itemPrice * 100)) / 100;
 
     if ($('#productName_' + itemId).attr('deleted') === 'false') {
 
         // Вычесляем общую стоимость всех товаров
-        var oldRealPrice = $('#itemRealPrice_' + itemId).attr('value');
-        var totalCost = $('#totalCostId').attr('value');
+        var oldRealPrice = Number($('#itemRealPrice_' + itemId).attr('value'));
+        var totalCost = Number($('#totalCostId').attr('value'));
         totalCost = totalCost - oldRealPrice + newRealPrice;
         totalCost = Math.round(totalCost * 1000) / 1000;
 

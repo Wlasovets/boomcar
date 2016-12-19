@@ -46,7 +46,7 @@
                                         <br>Marka samochodu: {$rsCarModel['name']}
                                     </p>
                                     <div class="aa-prod-quantity">
-                                        <input id="productQuantity_{$rsProduct['id']}" type="number" value="1" min="1" max="{$rsProduct['quantity']}" style="width: 50px; padding: 5px">
+                                        <input id="itemCnt_{$rsProduct['id']}" type="number" value="1" min="1" max="{$rsProduct['quantity']}" style="width: 50px; padding: 5px">
                                         <p class="aa-prod-category">z {$rsProduct['quantity']} sztuk</p>
                                     </div>
                                     <div class="aa-prod-view-bottom">

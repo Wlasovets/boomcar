@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-12 14:52:53
+/* Smarty version 3.1.30, created on 2016-12-19 07:18:59
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_584eabb57270e3_07753608',
+  'unifunc' => 'content_58577bd30f4245_09160306',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85d6fc6edd6d768626ca065ecad08fdf1fb448ed' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\footer.tpl',
-      1 => 1481544617,
+      1 => 1482128264,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_584eabb57270e3_07753608 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58577bd30f4245_09160306 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- footer -->
 <footer id="aa-footer">
@@ -41,7 +41,7 @@ function content_584eabb57270e3_07753608 (Smarty_Internal_Template $_smarty_tpl)
                             <div class="col-md-3 col-sm-6">
                                 <div class="aa-footer-widget">
                                     <address>
-                                        <p><span class="fa fa-phone"></span>+48-570-537-162</p>
+                                        <p><span class="fa fa-phone"></span>+48-577-344-611</p>
                                     </address>
                                 </div>
                             </div>

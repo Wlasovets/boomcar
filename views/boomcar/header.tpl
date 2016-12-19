@@ -78,6 +78,7 @@
                         <!-- / header top left -->
                         <div class="aa-header-top-right">
                             <ul class="aa-head-top-nav-right">
+                                <li><a href="account.html">My Account</a></li>
                                 <li><a href="" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
                             </ul>
                         </div>

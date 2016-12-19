@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-15 07:52:19
+/* Smarty version 3.1.30, created on 2016-12-19 14:04:15
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58523da357bcf2_27809710',
+  'unifunc' => 'content_5857dacf225510_63192677',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cec16432eccf3a824395f592fbbc630d756e604b' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\header.tpl',
-      1 => 1481784583,
+      1 => 1482152637,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58523da357bcf2_27809710 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5857dacf225510_63192677 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!DOCTYPE html>
@@ -108,13 +108,14 @@ css/addStyle.css" rel="stylesheet">
 
                             <!-- start cellphone -->
                             <div class="cellphone">
-                                <p><span class="fa fa-phone"></span>+48-570-537-162</p>
+                                <p><span class="fa fa-phone"></span>+48-577-344-611</p>
                             </div>
                             <!-- / cellphone -->
                         </div>
                         <!-- / header top left -->
                         <div class="aa-header-top-right">
                             <ul class="aa-head-top-nav-right">
+                                <li><a href="account.html">My Account</a></li>
                                 <li><a href="" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
                             </ul>
                         </div>

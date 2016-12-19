@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-16 11:22:32
+/* Smarty version 3.1.30, created on 2016-12-19 07:20:09
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\cart.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5853c068bebc26_42887582',
+  'unifunc' => 'content_58577c19d97017_78003477',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c88f3adc4624490d78de23f4f6ac035506df76' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\cart.tpl',
-      1 => 1481883599,
+      1 => 1482128264,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5853c068bebc26_42887582 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58577c19d97017_78003477 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="cart-view" style="min-height: calc(100vh - 320px)">
@@ -60,7 +60,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
                                         </td>
                                         <td><a id="productName_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " class="aa-cart-title" href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-/"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+/" deleted="false"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
 </a></td>
                                         <td><span id="itemPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
@@ -68,12 +68,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 </span> zł</td>
                                         <td><input name="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 " id="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-" class="aa-cart-quantity" type="number" value="1" min="1" max="<?php echo $_smarty_tpl->tpl_vars['item']->value['quantity'];?>
+" class="aa-cart-quantity" type="number" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['customQuantity'];?>
+" min="1" max="<?php echo $_smarty_tpl->tpl_vars['item']->value['quantity'];?>
 " onchange="conversionPrice(<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 );"></td>
                                         <td><span id="itemRealPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['realPrice'];?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value['realPrice'];?>
 </span> zł</td>
                                     </tr>
 
