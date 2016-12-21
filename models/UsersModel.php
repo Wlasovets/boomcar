@@ -83,3 +83,20 @@ function checkRegisterParams($email, $pwd1, $pwd2)
 
     return $res;
 }
+
+/**
+ * Проверка почты (есть ли email адрес в БД)
+ *
+ * @param string $email
+ * @return array|bool - строка из таблицы users либо пустой массив
+ */
+function checkUserEmail($email)
+{
+    $email = mysql_real_escape_string($email);
+    $sql = "SELECT id
+            FROM users
+            WHERE email = '{$email}'";
+
+    $rs = mysql_query($sql);
+    return createSmartyRsArray($rs);
+}
