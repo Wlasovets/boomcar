@@ -98,3 +98,25 @@ function conversionPrice(itemId) {
     $('#itemRealPrice_' + itemId).html(newRealPrice);
     $('#itemRealPrice_' + itemId).attr('value', newRealPrice);
 }
+
+/**
+ * Регистрация нового пользователя
+ *
+ */
+function registerNewUser() {
+
+    var postData = getData('#registerBox');
+
+    $.AJAX({
+        type: 'POST',
+        async: false,
+        url: "/user/register/",
+        data: postData,
+        dataType: 'json',
+        success: function (data) {
+            if(data['success']){
+                alert('Регистрация прошла успешно');
+            }
+        }
+    })
+}

@@ -61,3 +61,11 @@ function registerAction()
 
     echo json_encode($resData);
 }
+
+
+function accountAction($smarty)
+{
+    loadTemplate($smarty, 'header');
+    loadTemplate($smarty, 'registration');
+    loadTemplate($smarty, 'footer');
+}
