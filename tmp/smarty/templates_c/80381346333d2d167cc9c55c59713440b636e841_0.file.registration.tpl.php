@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2016-12-25 11:30:55
+  from "C:\xampp\htdocs\boomcar.local\views\boomcar\registration.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_585f9fdf2fde98_59796772',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '80381346333d2d167cc9c55c59713440b636e841' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\registration.tpl',
+      1 => 1482661848,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_585f9fdf2fde98_59796772 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!-- Cart view section -->
 <section id="aa-myaccount">
     <div class="container">
@@ -40,3 +64,5 @@
     </div>
 </section>
 <!-- / Cart view section -->
+<?php }
+}

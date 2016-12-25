@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-17 10:45:28
+/* Smarty version 3.1.30, created on 2016-12-24 13:59:50
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58550938728024_01027182',
+  'unifunc' => 'content_585e7146a4efc9_06018671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8f2744b0774b3e22b47aba7689afb4821799140c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\header.tpl',
-      1 => 1481967872,
+      1 => 1482230384,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58550938728024_01027182 (Smarty_Internal_Template $_smarty_tpl) {
+function content_585e7146a4efc9_06018671 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!DOCTYPE html>
@@ -115,6 +115,7 @@ css/addStyle.css" rel="stylesheet">
                         <!-- / header top left -->
                         <div class="aa-header-top-right">
                             <ul class="aa-head-top-nav-right">
+                                <li><a href="account.html">My Account</a></li>
                                 <li><a href="" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
                             </ul>
                         </div>

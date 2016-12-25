@@ -45,7 +45,7 @@ function registerNewUser($email, $pwdMD5, $name, $phone, $address)
     } else {
         $rs['success'] = 0;
     }
-
+d($rs);
     return $rs;
 }
 
@@ -88,7 +88,7 @@ function checkRegisterParams($email, $pwd1, $pwd2)
  * Проверка почты (есть ли email адрес в БД)
  *
  * @param string $email
- * @return array|bool - строка из таблицы users либо пустой массив
+ * @return array|bool - строка из таблицы users либо пустой массив, либо false - если результат запроса пустой
  */
 function checkUserEmail($email)
 {
