@@ -30,7 +30,7 @@ function registerNewUser($email, $pwdMD5, $name, $phone, $address)
 
         $sql = "SELECT *
                 FROM users
-                WHERE (`email` = '{$email}', `pwd` = '{$pwdMD5}')
+                WHERE (`email` = '{$email}' AND `pwd` = '{$pwdMD5}')
                 LIMIT 1";
 
         $rs = mysql_query($sql);
@@ -45,7 +45,7 @@ function registerNewUser($email, $pwdMD5, $name, $phone, $address)
     } else {
         $rs['success'] = 0;
     }
-d($rs);
+
     return $rs;
 }
 

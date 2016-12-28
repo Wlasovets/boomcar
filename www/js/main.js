@@ -134,6 +134,7 @@ function registerNewUser() {
         dataType: 'json',
         success: function (data) {
             if (data['success']) {
+                //location.reload();
                 alert('Регистрация прошла успешно');
             } else {
                 alert(data['message']);

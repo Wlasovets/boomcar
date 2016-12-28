@@ -43,18 +43,18 @@ function registerAction()
         if($userData['success']) {
 
             $resData['message'] = 'Пользователь успешно зарегистрирован';
-            $resData['success'] = 1;
+            $resData['success'] = true;
 
             $userData = $userData[0];
             $resData['userName'] = $userData['name'] ? $userData['name'] : $userData['email'];
             $resData['userEmail'] = $email;
 
             $_SESSION['user'] = $userData;
-            $_SESSION['user']['displayName'] = $userData['user'] ? $userData['name'] : $userData['email'];
+            $_SESSION['user']['displayName'] = $userData['name'] ? $userData['name'] : $userData['email'];
 
         } else {
 
-            $resData['success'] = null;
+            $resData['success'] = false;
             $resData['message'] = 'Ошибка регистрации';
         }
     }
