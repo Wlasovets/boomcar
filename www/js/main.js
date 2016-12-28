@@ -134,8 +134,8 @@ function registerNewUser() {
         dataType: 'json',
         success: function (data) {
             if (data['success']) {
-                //location.reload();
-                alert('Регистрация прошла успешно');
+                $(location).attr('href', "http://boomcar.local/");
+                //alert('Регистрация прошла успешно');
             } else {
                 alert(data['message']);
             }
