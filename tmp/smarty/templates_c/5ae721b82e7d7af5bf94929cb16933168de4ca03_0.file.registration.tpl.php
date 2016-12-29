@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-24 11:21:07
+/* Smarty version 3.1.30, created on 2016-12-27 13:42:32
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\registration.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_585e4c13dd40a4_21914268',
+  'unifunc' => 'content_586261b807a122_47273810',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5ae721b82e7d7af5bf94929cb16933168de4ca03' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\registration.tpl',
-      1 => 1482574855,
+      1 => 1482735592,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_585e4c13dd40a4_21914268 (Smarty_Internal_Template $_smarty_tpl) {
+function content_586261b807a122_47273810 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="aa-myaccount">
@@ -32,13 +32,15 @@ function content_585e4c13dd40a4_21914268 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="col-md-6">
                             <div class="aa-myaccount-register">
                                 <h4>Register</h4>
-                                <form action="" class="aa-login-form">
+                                <div id="registerBox" class="aa-login-form">
                                     <label for="">Username or Email address<span>*</span></label>
-                                    <input type="text" placeholder="Username or email">
+                                    <input id="email" name="email" type="text" placeholder="Username or email">
                                     <label for="">Password<span>*</span></label>
-                                    <input type="password" placeholder="Password">
-                                    <button type="submit" class="aa-browse-btn">Register</button>
-                                </form>
+                                    <input id="pwd1" name="pwd1" type="password" placeholder="Password">
+                                    <label for="">Password<span>*</span></label>
+                                    <input id="pwd2" name="pwd2" type="password" placeholder="Password">
+                                    <button type="submit" class="aa-browse-btn" onclick="registerNewUser()">Register</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
