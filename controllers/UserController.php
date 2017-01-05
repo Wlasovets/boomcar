@@ -69,3 +69,17 @@ function accountAction($smarty)
     loadTemplate($smarty, 'registration');
     loadTemplate($smarty, 'footer');
 }
+
+/**
+ * Разлогирование пользователя
+ */
+function logoutAction()
+{
+    if(isset($_SESSION['user'])) {
+
+        unset($_SESSION['user']);
+        unset($_SESSION['cart']);
+    }
+
+    redirect('/');
+}

@@ -68,7 +68,7 @@
             <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4>Login or Register</h4>
-                <form class="aa-login-form" action="">
+                <div class="aa-login-form">
                     <label for="">Username or Email address<span>*</span></label>
                     <input type="text" placeholder="Username or email">
                     <label for="">Password<span>*</span></label>
@@ -79,7 +79,7 @@
                     <div class="aa-register-now">
                         Don't have an account?<a href="/user/account/">Register now!</a>
                     </div>
-                </form>
+                </div>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

@@ -134,7 +134,11 @@ function registerNewUser() {
         dataType: 'json',
         success: function (data) {
             if (data['success']) {
-                $(location).attr('href', "/index/");
+
+                $('#loginLink').hide();
+                $('#logoutLink').show();
+                $('#userLink').attr('href', '/user/');
+                //$(location).attr('href', "/");
                 //alert('Регистрация прошла успешно');
             } else {
                 alert(data['message']);
