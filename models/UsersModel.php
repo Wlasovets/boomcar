@@ -122,9 +122,9 @@ function loginUser($email, $pwd)
     $rs = createSmartyRsArray($rs);
 
     if (isset($rs[0])) {
-        rs['success'] = 1;
+        //rs['success'] = 1;
     } else {
-        rs['success'] = 0;
+       // rs['success'] = 0;
     }
 
     return $rs;
