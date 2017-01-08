@@ -29,18 +29,18 @@ function registerAction()
     $resData = null;
     $resData = checkRegisterParams($email, $pwd1, $pwd2);
 
-    if(!$resData && checkUserEmail($email)) {
+    if (!$resData && checkUserEmail($email)) {
 
         $resData['success'] = false;
         $resData['message'] = "Пользователь с таким email('{$email}') уже зарегистрирован";
     }
 
-    if(!$resData) {
+    if (!$resData) {
 
         $pwdMD5 = md5($pwd1);
         $userData = registerNewUser($email, $pwdMD5, $name, $phone, $address);
 
-        if($userData['success']) {
+        if ($userData['success']) {
 
             $resData['message'] = 'Пользователь успешно зарегистрирован';
             $resData['success'] = true;
@@ -75,11 +75,37 @@ function accountAction($smarty)
  */
 function logoutAction()
 {
-    if(isset($_SESSION['user'])) {
+    if (isset($_SESSION['user'])) {
 
         unset($_SESSION['user']);
         unset($_SESSION['cart']);
     }
 
     redirect('/');
+}
+
+/**
+ * AJAX авторизация пользователя
+ *
+ * @return json массив данных пользователя
+ */
+function loginAction()
+{
+    $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null;
+    $email = trim($email);
+
+    $pwd = isset($_REQUEST['pwd']) ? $_REQUEST['pwd'] : null;
+    $pwd = trim($pwd);
+
+    $userData = loginUser($email, $pwd);
+
+    if ($userData['success']) {
+
+        $userData = $userData[0];
+
+    } else {
+
+    }
+
+    echo json_encode($resData);
 }

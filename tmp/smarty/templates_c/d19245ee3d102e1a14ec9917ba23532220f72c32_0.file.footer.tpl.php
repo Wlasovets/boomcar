@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-24 13:59:51
+/* Smarty version 3.1.30, created on 2017-01-07 13:25:42
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_585e71472adf97_88567908',
+  'unifunc' => 'content_5870de469f1d99_11765939',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd19245ee3d102e1a14ec9917ba23532220f72c32' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\footer.tpl',
-      1 => 1482577957,
+      1 => 1483791611,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_585e71472adf97_88567908 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5870de469f1d99_11765939 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- footer -->
 <footer id="aa-footer">
@@ -92,7 +92,7 @@ function content_585e71472adf97_88567908 (Smarty_Internal_Template $_smarty_tpl)
             <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4>Login or Register</h4>
-                <form class="aa-login-form" action="">
+                <div class="aa-login-form">
                     <label for="">Username or Email address<span>*</span></label>
                     <input type="text" placeholder="Username or email">
                     <label for="">Password<span>*</span></label>
@@ -103,7 +103,7 @@ function content_585e71472adf97_88567908 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="aa-register-now">
                         Don't have an account?<a href="/user/account/">Register now!</a>
                     </div>
-                </form>
+                </div>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

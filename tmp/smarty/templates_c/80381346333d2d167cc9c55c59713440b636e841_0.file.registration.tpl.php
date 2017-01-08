@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-25 11:30:55
+/* Smarty version 3.1.30, created on 2017-01-07 13:25:56
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\registration.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_585f9fdf2fde98_59796772',
+  'unifunc' => 'content_5870de549cde98_64019662',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '80381346333d2d167cc9c55c59713440b636e841' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\registration.tpl',
-      1 => 1482661848,
+      1 => 1483791611,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_585f9fdf2fde98_59796772 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5870de549cde98_64019662 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="aa-myaccount">
@@ -46,7 +46,7 @@ function content_585f9fdf2fde98_59796772 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="col-md-6">
                             <div class="aa-myaccount-login">
                                 <h4>Login</h4>
-                                <form action="" class="aa-login-form">
+                                <div class="aa-login-form">
                                     <label for="">Username or Email address<span>*</span></label>
                                     <input type="text" placeholder="Username or email">
                                     <label for="">Password<span>*</span></label>
@@ -54,7 +54,7 @@ function content_585f9fdf2fde98_59796772 (Smarty_Internal_Template $_smarty_tpl)
                                     <button type="submit" class="aa-browse-btn">Login</button>
                                     <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
                                     <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>

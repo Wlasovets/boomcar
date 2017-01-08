@@ -100,3 +100,32 @@ function checkUserEmail($email)
     $rs = mysql_query($sql);
     return createSmartyRsArray($rs);
 }
+
+/**
+ * Авторизация пользователя
+ *
+ * @param string $email - почта (логин)
+ * @param string $pwd - пароль
+ * @return array|bool|resource - массив данных пользователя
+ */
+function loginUser($email, $pwd)
+{
+    $email = htmlspecialchars(mysql_real_escape_string($email));
+    $pwd = md5($pwd);
+
+    $sql = "SELECT *
+            FROM users
+            WHERE (`email` = '{$email}' and `pwd` = '{$pwd}')
+            LIMIT 1";
+
+    $rs = mysql_query($sql);
+    $rs = createSmartyRsArray($rs);
+
+    if (isset($rs[0])) {
+        rs['success'] = 1;
+    } else {
+        rs['success'] = 0;
+    }
+
+    return $rs;
+}
