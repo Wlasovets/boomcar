@@ -146,3 +146,31 @@ function registerNewUser() {
         }
     });
 }
+
+function login() {
+
+    var email = $('#loginEmail').val();
+    var pwd = $('#loginpwd').val();
+
+    var postData = "email=" + email + "&pwd=" + pwd;
+
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: "/user/login/",
+        data: postData,
+        dataType: 'json',
+        success: function(data){
+
+            if (data['success']){
+
+                $('#loginLink').hide();
+                $('#logoutLink').show();
+                $('#userLink').attr('href', '/user/');
+
+            } else {
+                alert(data['message']);
+            }
+        }
+    });
+}

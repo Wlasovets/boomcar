@@ -102,9 +102,15 @@ function loginAction()
     if ($userData['success']) {
 
         $userData = $userData[0];
+        $_SESSION['user'] = $userData;
+        $_SESSION['user']['displayName'] = $userData['name'] ? $userData['name'] : $userData['email'];
+        $resData = $_SESSION['user'];
+        $resData['success'] = 1;
 
     } else {
 
+        $resData['success'] = 0;
+        $resData['message'] = 'Неверный логин или пароль';
     }
 
     echo json_encode($resData);
