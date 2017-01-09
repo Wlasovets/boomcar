@@ -70,10 +70,10 @@
                 <h4>Login or Register</h4>
                 <div class="aa-login-form">
                     <label for="">Username or Email address<span>*</span></label>
-                    <input type="text" placeholder="Username or email">
+                    <input id="modalEmail" type="text" placeholder="Username or email">
                     <label for="">Password<span>*</span></label>
-                    <input type="password" placeholder="Password">
-                    <button class="aa-browse-btn" type="submit">Login</button>
+                    <input id="modalPwd" type="password" placeholder="Password">
+                    <button class="aa-browse-btn" type="submit" onclick="login('modalEmail', 'modalPwd')">Login</button>
                     <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
                     <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
                     <div class="aa-register-now">

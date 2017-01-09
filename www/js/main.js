@@ -138,7 +138,7 @@ function registerNewUser() {
                 $('#loginLink').hide();
                 $('#logoutLink').show();
                 $('#userLink').attr('href', '/user/');
-                //$(location).attr('href', "/");
+                $(location).attr('href', "/");
                 //alert('Регистрация прошла успешно');
             } else {
                 alert(data['message']);
@@ -147,10 +147,16 @@ function registerNewUser() {
     });
 }
 
-function login() {
+/**
+ * Авторизация пользователя
+ *
+ * email - id поля email
+ * pwd - id поля password
+ */
+function login(email, pwd) {
 
-    var email = $('#loginEmail').val();
-    var pwd = $('#loginpwd').val();
+    var email = $('#' + email).val();
+    var pwd = $('#' + pwd).val();
 
     var postData = "email=" + email + "&pwd=" + pwd;
 
@@ -160,13 +166,14 @@ function login() {
         url: "/user/login/",
         data: postData,
         dataType: 'json',
-        success: function(data){
+        success: function (data) {
 
-            if (data['success']){
+            if (data['success']) {
 
                 $('#loginLink').hide();
                 $('#logoutLink').show();
                 $('#userLink').attr('href', '/user/');
+                $(location).attr('href', "/");
 
             } else {
                 alert(data['message']);

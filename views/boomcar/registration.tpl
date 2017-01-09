@@ -27,7 +27,7 @@
                                     <input id="loginEmail" type="text" placeholder="Username or email">
                                     <label for="">Password<span>*</span></label>
                                     <input id="loginPwd" type="password" placeholder="Password">
-                                    <button type="submit" onclick="login();" class="aa-browse-btn">Login</button>
+                                    <button type="submit" onclick="login('loginEmail', 'loginPwd');" class="aa-browse-btn">Login</button>
                                     <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
                                     <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
                                 </div>
