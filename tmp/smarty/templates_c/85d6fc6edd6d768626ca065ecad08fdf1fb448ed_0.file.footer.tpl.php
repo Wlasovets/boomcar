@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-05 13:11:38
+/* Smarty version 3.1.30, created on 2017-01-10 08:22:13
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_586e37fa1312d4_24552032',
+  'unifunc' => 'content_58748ba529f638_09230978',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85d6fc6edd6d768626ca065ecad08fdf1fb448ed' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\footer.tpl',
-      1 => 1483618235,
+      1 => 1484029226,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_586e37fa1312d4_24552032 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58748ba529f638_09230978 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- footer -->
 <footer id="aa-footer">
@@ -94,10 +94,10 @@ function content_586e37fa1312d4_24552032 (Smarty_Internal_Template $_smarty_tpl)
                 <h4>Login or Register</h4>
                 <div class="aa-login-form">
                     <label for="">Username or Email address<span>*</span></label>
-                    <input type="text" placeholder="Username or email">
+                    <input id="modalEmail" type="text" placeholder="Username or email">
                     <label for="">Password<span>*</span></label>
-                    <input type="password" placeholder="Password">
-                    <button class="aa-browse-btn" type="submit">Login</button>
+                    <input id="modalPwd" type="password" placeholder="Password">
+                    <button class="aa-browse-btn" type="submit" onclick="login('modalEmail', 'modalPwd')">Login</button>
                     <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
                     <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
                     <div class="aa-register-now">

@@ -78,9 +78,20 @@
                         <!-- / header top left -->
                         <div class="aa-header-top-right">
                             <ul class="aa-head-top-nav-right">
-                                <li><a id="userLink" href="/user/account/">My Account</a></li>
-                                <li id="loginLink"><a href="" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
-                                <li id="logoutLink" style="display: none;"><a href="/user/logout/">Logout</a></li>
+
+                                {if isset($arUser)}
+
+                                    <li><a id="userLink" href="/user/">My Account</a></li>
+                                    <li id="logoutLink"><a href="/user/logout/">Logout</a></li>
+
+                                {else}
+
+                                    <li><a id="userLink" href="/user/account/">My Account</a></li>
+                                    <li id="loginLink"><a href="" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
+                                    <li id="logoutLink" style="display: none;"><a href="/user/logout/">Logout</a></li>
+
+                                {/if}
+
                             </ul>
                         </div>
                     </div>
