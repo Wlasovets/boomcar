@@ -81,7 +81,7 @@
 
                                 {if isset($arUser)}
 
-                                    <li><a id="userLink" href="/user/">My Account</a></li>
+                                    <li><a id="userLink" href="/user/">{$arUser['displayName']}</a></li>
                                     <li id="logoutLink"><a href="/user/logout/">Logout</a></li>
 
                                 {else}

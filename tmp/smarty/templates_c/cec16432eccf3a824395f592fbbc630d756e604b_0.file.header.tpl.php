@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-10 08:24:26
+/* Smarty version 3.1.30, created on 2017-02-07 11:32:37
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58748c2a03d092_30600662',
+  'unifunc' => 'content_5899a245393878_41694727',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cec16432eccf3a824395f592fbbc630d756e604b' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\header.tpl',
-      1 => 1484033011,
+      1 => 1486463525,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58748c2a03d092_30600662 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5899a245393878_41694727 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!DOCTYPE html>
@@ -118,7 +118,8 @@ css/addStyle.css" rel="stylesheet">
 
                                 <?php if (isset($_smarty_tpl->tpl_vars['arUser']->value)) {?>
 
-                                    <li><a id="userLink" href="/user/">My Account</a></li>
+                                    <li><a id="userLink" href="/user/"><?php echo $_smarty_tpl->tpl_vars['arUser']->value['displayName'];?>
+</a></li>
                                     <li id="logoutLink"><a href="/user/logout/">Logout</a></li>
 
                                 <?php } else { ?>

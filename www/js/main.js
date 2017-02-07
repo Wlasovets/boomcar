@@ -138,6 +138,7 @@ function registerNewUser() {
                 $('#loginLink').hide();
                 $('#logoutLink').show();
                 $('#userLink').attr('href', '/user/');
+                $('#userLink').html(data['userName']);
                 $(location).attr('href', "/");
                 //alert('Регистрация прошла успешно');
             } else {
@@ -173,6 +174,7 @@ function login(email, pwd) {
                 $('#loginLink').hide();
                 $('#logoutLink').show();
                 $('#userLink').attr('href', '/user/');
+                //$('#userLink').html(data['userName']);
                 $(location).attr('href', "/");
 
             } else {
