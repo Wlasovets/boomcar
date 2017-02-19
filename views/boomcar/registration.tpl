@@ -9,12 +9,18 @@
                             <div class="aa-myaccount-register">
                                 <h4>Register</h4>
                                 <div id="registerBox" class="aa-login-form">
-                                    <label for="">Username or Email address<span>*</span></label>
-                                    <input id="email" name="email" type="text" placeholder="Username or email">
+                                    <label for="">Username<span>*</span></label>
+                                    <input id="username" name="username" type="text" placeholder="Username">
                                     <label for="">Password<span>*</span></label>
                                     <input id="pwd1" name="pwd1" type="password" placeholder="Password">
                                     <label for="">Password<span>*</span></label>
                                     <input id="pwd2" name="pwd2" type="password" placeholder="Password">
+                                    <label for="">Email address</label>
+                                    <input id="email" name="email" type="text" placeholder="Email">
+                                    <label for="">Phone number</label>
+                                    <input id="phonenumber" name="phonenumber" type="text" placeholder="Phone number">
+                                    <label for="">Address</label>
+                                    <textarea id="address" name="address" placeholder="Address"></textarea>
                                     <button type="submit" class="aa-browse-btn" onclick="registerNewUser()">Register</button>
                                 </div>
                             </div>

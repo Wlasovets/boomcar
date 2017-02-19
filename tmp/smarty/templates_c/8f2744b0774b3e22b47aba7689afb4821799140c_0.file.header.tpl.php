@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-07 13:25:42
+/* Smarty version 3.1.30, created on 2017-02-19 10:23:30
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5870de466b1c42_45079175',
+  'unifunc' => 'content_58a964125488a9_07446666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8f2744b0774b3e22b47aba7689afb4821799140c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\header.tpl',
-      1 => 1483791611,
+      1 => 1487496182,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5870de466b1c42_45079175 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58a964125488a9_07446666 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <!DOCTYPE html>
@@ -115,9 +115,21 @@ css/addStyle.css" rel="stylesheet">
                         <!-- / header top left -->
                         <div class="aa-header-top-right">
                             <ul class="aa-head-top-nav-right">
-                                <li><a id="userLink" href="/user/account/">My Account</a></li>
-                                <li id="loginLink"><a href="" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
-                                <li id="logoutLink" style="display: none;"><a href="/user/logout/">Logout</a></li>
+
+                                <?php if (isset($_smarty_tpl->tpl_vars['arUser']->value)) {?>
+
+                                    <li><a id="userLink" href="/user/"><?php echo $_smarty_tpl->tpl_vars['arUser']->value['displayName'];?>
+</a></li>
+                                    <li id="logoutLink"><a href="/user/logout/">Logout</a></li>
+
+                                <?php } else { ?>
+
+                                    <li><a id="userLink" href="/user/account/">My Account</a></li>
+                                    <li id="loginLink"><a href="" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
+                                    <li id="logoutLink" style="display: none;"><a href="/user/logout/">Logout</a></li>
+
+                                <?php }?>
+
                             </ul>
                         </div>
                     </div>
