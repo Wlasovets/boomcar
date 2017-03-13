@@ -115,3 +115,23 @@ function loginAction()
 
     echo json_encode($resData);
 }
+
+/**
+ * Формирование главной страницы пользователя
+ *
+ * @link /user/
+ * @param object $smarty шаблонизатор
+ */
+function indexAction($smarty)
+{
+    // если пользователь не залогинен то редирект на главную страницу
+    if(!isset($_SESSION['user'])) {
+        redirect('/');
+    }
+
+    $smarty->assign('pageTitle', 'Страница пользователя');
+
+    loadTemplate($smarty, 'header');
+    loadTemplate($smarty, 'user');
+    loadTemplate($smarty, 'footer');
+}
