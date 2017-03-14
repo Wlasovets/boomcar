@@ -10,7 +10,7 @@
                                 <h4>Register</h4>
                                 <div id="registerBox" class="aa-login-form">
                                     <label for="">Login or Email address<span>*</span></label>
-                                    <input id="username" name="username" type="text" placeholder="Username">
+                                    <input id="email" name="email" type="text" placeholder="Email">
                                     <label for="">Password<span>*</span></label>
                                     <input id="pwd1" name="pwd1" type="password" placeholder="Password">
                                     <label for="">Password<span>*</span></label>
