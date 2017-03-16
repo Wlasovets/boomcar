@@ -147,7 +147,6 @@ function updateUserData($name, $phone, $address, $pwd1, $pwd2, $curPwd)
     $address = htmlspecialchars(mysql_real_escape_string($address));
     $pwd1 = trim($pwd1);
     $pwd2 = trim($pwd2);
-    $curPwd = md5(trim($curPwd));
 
     $newPwd = null;
 

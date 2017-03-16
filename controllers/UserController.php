@@ -135,3 +135,55 @@ function indexAction($smarty)
     loadTemplate($smarty, 'user');
     loadTemplate($smarty, 'footer');
 }
+
+/**
+ * Обновление данных пользователя
+ *
+ * @return json - результаты выполнения функции
+ */
+function updateAction() {
+
+    // если пользователь не залогинен, то выходим
+    if (! isset($_SESSION['user'])) {
+        redirect('/');
+    }
+
+    // Инициализация переменных
+    $resData = array();
+    $phone = isset($_REQUEST['phone']) ? $_REQUEST['phone'] : null;
+    $address = isset($_REQUEST['address']) ? $_REQUEST['address'] : null;
+    $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : null;
+    $pwd1 = isset($_REQUEST['pwd1']) ? $_REQUEST['pwd1'] : null;
+    $pwd2 = isset($_REQUEST['pwd2']) ? $_REQUEST['pwd2'] : null;
+    $curPwd = isset($_REQUEST['curPwd']) ? $_REQUEST['curPwd'] : null;
+
+    // Проверка правильности пароля
+    $curPwdMD5 = md5($curPwd);
+    if(! $curPwd || ($_SESSION['user']['pwd'] != $curPwdMD5) ) {
+        $resData['success'] = 0;
+        $resData['message'] = 'Current password is not correct';
+        echo json_encode($resData);
+        return false;
+    }
+
+    // Обновление данных пользователя
+    $res = updateUserData($name, $phone, $address, $pwd1, $pwd2, $curPwd);
+
+    if($res) {
+        $resData['success'] = 1;
+        $resData['message'] = 'Data saved';
+        $resData['userName'] = $name;
+
+        $_SESSION['user']['name'] = $name;
+        $_SESSION['user']['phone'] = $phone;
+        $_SESSION['user']['address'] = $address;
+        $_SESSION['user']['pwd'] = $curPwdMD5;
+        $_SESSION['user']['displayName'] = $name ? $name : $_SESSION['user']['email'];
+
+    } else {
+        $resData['success'] = 0;
+        $resData['message'] = 'Error saving data';
+    }
+
+    echo json_encode($resData);
+}
