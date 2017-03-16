@@ -204,4 +204,20 @@ function updateUserData() {
         curPwd: curPwd,
         name: name
     };
+
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: "/user/update/",
+        data: postData,
+        dataType: 'json',
+        success: function (data) {
+            if(data['success']) {
+                $('#userLink').html(data['userName']);
+                alert(data['message']);
+            } else {
+                alert(data['message']);
+            }
+        }
+    });
 }
