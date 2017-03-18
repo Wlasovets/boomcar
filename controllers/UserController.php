@@ -185,8 +185,11 @@ function updateAction() {
         $_SESSION['user']['name'] = $name;
         $_SESSION['user']['phone'] = $phone;
         $_SESSION['user']['address'] = $address;
-        $_SESSION['user']['pwd'] = md5($pwd1);
         $_SESSION['user']['displayName'] = $name ? $name : $_SESSION['user']['email'];
+
+        if($pwd1) {
+            $_SESSION['user']['pwd'] = md5(trim($pwd1));
+        }
 
     } else {
         $resData['success'] = 0;
