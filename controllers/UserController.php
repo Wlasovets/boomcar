@@ -185,7 +185,7 @@ function updateAction() {
         $_SESSION['user']['name'] = $name;
         $_SESSION['user']['phone'] = $phone;
         $_SESSION['user']['address'] = $address;
-        $_SESSION['user']['pwd'] = $curPwdMD5;
+        $_SESSION['user']['pwd'] = md5($pwd1);
         $_SESSION['user']['displayName'] = $name ? $name : $_SESSION['user']['email'];
 
     } else {
