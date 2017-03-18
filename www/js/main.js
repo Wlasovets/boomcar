@@ -213,7 +213,7 @@ function updateUserData() {
         dataType: 'json',
         success: function (data) {
             if(data['success']) {
-                $('#userLink').html(data['userName']);
+                $('userLink').html(data['userName']);
                 alert(data['message']);
             } else {
                 alert(data['message']);

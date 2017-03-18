@@ -157,6 +157,14 @@ function updateAction() {
     $pwd2 = isset($_REQUEST['pwd2']) ? $_REQUEST['pwd2'] : null;
     $curPwd = isset($_REQUEST['curPwd']) ? $_REQUEST['curPwd'] : null;
 
+    // Проверка совпадения нового пароля
+    if($pwd1 != $pwd2) {
+        $resData['success'] = 0;
+        $resData['message'] = 'New passwords do not match';
+        echo json_encode($resData);
+        return false;
+    }
+
     // Проверка правильности пароля
     $curPwdMD5 = md5($curPwd);
     if(! $curPwd || ($_SESSION['user']['pwd'] != $curPwdMD5) ) {
@@ -167,7 +175,7 @@ function updateAction() {
     }
 
     // Обновление данных пользователя
-    $res = updateUserData($name, $phone, $address, $pwd1, $pwd2, $curPwd);
+    $res = updateUserData($name, $phone, $address, $pwd1, $pwd2, $curPwdMD5);
 
     if($res) {
         $resData['success'] = 1;
