@@ -72,3 +72,9 @@ address {
     }
   }
 }
+
+#cart-view .cart-view-area .cart-view-table .cart-view-total input {
+  margin-top: 30px;
+  display: inline-block;
+  float: none;
+}

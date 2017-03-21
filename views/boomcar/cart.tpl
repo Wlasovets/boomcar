@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="cart-view-area">
                     <div class="cart-view-table">
-                        <form action="">
+                        <form action="/cart/order/" method="POST">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -37,7 +37,6 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </form>
                         <!-- Cart Total view -->
                         <div class="cart-view-total">
                             <table class="aa-totals-table">
@@ -48,8 +47,9 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="aa-cart-view-btn">Proced to Checkout</a>
+                            <input type="submit" class="aa-cart-view-btn" value="złożyć zamówienie">
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>

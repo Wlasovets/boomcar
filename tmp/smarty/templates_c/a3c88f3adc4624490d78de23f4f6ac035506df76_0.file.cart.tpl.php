@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-19 07:20:09
+/* Smarty version 3.1.30, created on 2017-03-21 07:54:15
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\cart.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58577c19d97017_78003477',
+  'unifunc' => 'content_58d0ce17dd40a2_58863198',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3c88f3adc4624490d78de23f4f6ac035506df76' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\cart.tpl',
-      1 => 1482128264,
+      1 => 1490079249,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58577c19d97017_78003477 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d0ce17dd40a2_58863198 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="cart-view" style="min-height: calc(100vh - 320px)">
@@ -29,7 +29,7 @@ function content_58577c19d97017_78003477 (Smarty_Internal_Template $_smarty_tpl)
             <div class="col-md-12">
                 <div class="cart-view-area">
                     <div class="cart-view-table">
-                        <form action="">
+                        <form action="/cart/order/" method="POST">
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -88,7 +88,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                     </tbody>
                                 </table>
                             </div>
-                        </form>
                         <!-- Cart Total view -->
                         <div class="cart-view-total">
                             <table class="aa-totals-table">
@@ -101,8 +100,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                 </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="aa-cart-view-btn">Proced to Checkout</a>
+                            <input type="submit" class="aa-cart-view-btn" value="złożyć zamówienie">
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
