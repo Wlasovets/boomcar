@@ -112,4 +112,57 @@ function orderAction($smarty)
         redirect('/cart/');
         return;
     }
+
+    // Получаем из массива $_POST количество покупаемых товаров
+    $itemsCnt = array();
+
+    foreach ($itemsIds as $item) {
+        // Формируем ключ для массива $_POST
+        $postVar = 'itemCnt_' . $item;
+
+        // Создаем элемент массива количества покупаемого товара
+        // Ключ массива - ID товара, значение массива - количество товара
+        // $itemsCnt[1] = 3; товар с ID = 1 покупают 3 штуки
+        $itemsCnt[$item] = isset($_POST[$postVar]) ? $_POST[$postVar] : null;
+    }
+
+    // Получаем список продуктов по массиву корзины
+    $rsProducts = getProductsFromArray($itemsIds);
+
+    // Добавляем каждому продукту дополнительное поле
+    // 'realPrice' = количество продуктов * цена продукта
+    // 'cnt' - количество покупаемого товара
+
+    // &$item - для того, чтобы можно было изменить значение элемента массива $rsProducts
+    $i = 0;
+    foreach ($rsProducts as &$item) {
+        $item['cnt'] = isset($itemsCnt[$item['id']]) ? $itemsCnt[$item['id']] : 0;
+        if($item['cnt']) {
+            $item['realPrice'] = $item['cnt'] * $item['price'];
+        } else {
+            // Если товар в корзине есть, а количество расно 0, то удаляем этот товар
+            unset($rsProducts[$i]);
+        }
+        $i++;
+    }
+
+    if(! $rsProducts) {
+        echo "Корзина пуста";
+        return;
+    }
+
+    // Полученный массив покупаемых товаров помещаем в сессионную переменную
+    $_SESSION['saleCart'] = $rsProducts;
+
+    // hideLoginBox - флаг для того, что бы спрятать блок авторизации
+    if(! isset($_SESSION['user'])) {
+        $smarty->assign('hideLoginBox', 1);
+    }
+
+    $smarty->assign('Title', 'Order');
+    $smarty->assign('rsProducts', $rsProducts);
+
+    loadTemplate($smarty, 'header');
+    loadTemplate($smarty, 'order');
+    loadTemplate($smarty, 'footer');
 }
