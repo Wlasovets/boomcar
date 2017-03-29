@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-03-29 16:50:22
+  from "D:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58dbc9ae94c5f6_63233853',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '09fc580609ed61ac5aad889e86ab548912d12f3c' => 
+    array (
+      0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
+      1 => 1490799007,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_58dbc9ae94c5f6_63233853 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!-- Cart view section -->
 <section id="checkout">
     <div class="container">
@@ -100,19 +124,35 @@
                                             </thead>
                                             <tbody>
 
-                                            {foreach $rsProducts as $item name=products}
+                                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsProducts']->value, 'item', false, NULL, 'products', array (
+));
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+?>
                                                 <tr>
                                                     <td>
-                                                        <a href="/product/{$item['id']}/">{$item['name']}</a>
-                                                        <span id="itemCnt_{$item['id']}">
-                                                            <input type="hidden" name="itemCnt_{$item['id']}" value="{$item['cnt']}" />
-                                                            <strong> x  {$item['cnt']}</strong>
+                                                        <a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+/"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</a>
+                                                        <span id="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+">
+                                                            <input type="hidden" name="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['cnt'];?>
+" />
+                                                            <strong> x  <?php echo $_smarty_tpl->tpl_vars['item']->value['cnt'];?>
+</strong>
                                                         </span>
                                                     </td>
 
                                                     <td>$150</td>
                                                 </tr>
-                                            {/foreach}
+                                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 
                                             </tbody>
                                             <tfoot>
@@ -140,3 +180,5 @@
     </div>
 </section>
 <!-- / Cart view section -->
+<?php }
+}
