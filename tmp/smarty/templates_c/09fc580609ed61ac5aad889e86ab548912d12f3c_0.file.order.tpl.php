@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-29 16:50:22
+/* Smarty version 3.1.30, created on 2017-03-30 12:34:35
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58dbc9ae94c5f6_63233853',
+  'unifunc' => 'content_58dcdf3b5b8d82_18771094',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09fc580609ed61ac5aad889e86ab548912d12f3c' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
-      1 => 1490799007,
+      1 => 1490870069,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58dbc9ae94c5f6_63233853 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58dcdf3b5b8d82_18771094 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="checkout">
@@ -33,6 +33,59 @@ function content_58dbc9ae94c5f6_63233853 (Smarty_Internal_Template $_smarty_tpl)
                             <div class="col-md-8">
                                 <div class="checkout-left">
                                     <div class="panel-group" id="accordion">
+
+                                        <?php if (isset($_smarty_tpl->tpl_vars['arUser']->value)) {?>
+
+                                        <?php $_smarty_tpl->_assignInScope('buttonClass', '');
+?>
+
+                                        <!-- Shipping Address -->
+                                        <div id="orderUserInfoBox" <?php echo $_smarty_tpl->tpl_vars['buttonClass']->value;?>
+ class="panel panel-default aa-checkout-billaddress">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                        Shippping Address
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="aa-checkout-single-bill">
+                                                                <input type="text" placeholder="Name*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['name'];?>
+">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="aa-checkout-single-bill">
+                                                                <input type="tel" placeholder="Phone*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['phone'];?>
+">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="aa-checkout-single-bill">
+                                                                <textarea cols="8" rows="3" placeholder="Address*"><?php echo $_smarty_tpl->tpl_vars['arUser']->value['address'];?>
+</textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="aa-checkout-single-bill">
+                                                                <textarea cols="8" rows="3" placeholder="Special Notes"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <?php } else { ?>
+
                                         <!-- Shipping Address -->
                                         <div class="panel panel-default aa-checkout-billaddress">
                                             <div class="panel-heading">
@@ -47,26 +100,26 @@ function content_58dbc9ae94c5f6_63233853 (Smarty_Internal_Template $_smarty_tpl)
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="text" placeholder="Name*">
+                                                                <input type="text" id="name" name="name" value="" placeholder="Name*">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="tel" placeholder="Phone*">
+                                                                <input type="tel" id="phone" name="phone" value="" placeholder="Phone*">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Address*"></textarea>
+                                                                <textarea id="address" name="address" value="" cols="8" rows="3" placeholder="Address*"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Special Notes"></textarea>
+                                                                <textarea id="specnotes" name="specnotes" value="" cols="8" rows="3" placeholder="Special Notes"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -74,7 +127,7 @@ function content_58dbc9ae94c5f6_63233853 (Smarty_Internal_Template $_smarty_tpl)
                                             </div>
                                         </div>
                                         <!-- Login section -->
-                                        <div class="panel panel-default aa-checkout-login">
+                                        <div id="loginBox" class="panel panel-default aa-checkout-login">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
@@ -84,14 +137,14 @@ function content_58dbc9ae94c5f6_63233853 (Smarty_Internal_Template $_smarty_tpl)
                                             </div>
                                             <div id="collapseTwo" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <input type="text" placeholder="Login or email">
-                                                    <input type="password" placeholder="Password">
-                                                    <button type="submit" class="aa-browse-btn">Login</button>
+                                                    <input type="text"id="loginEmail" name="loginEmail" placeholder="Login or email">
+                                                    <input type="password" id="loginPwd" name="loginPwd" placeholder="Password">
+                                                    <button type="submit" class="aa-browse-btn" onclick="login();">Login</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- Registration section -->
-                                        <div class="panel panel-default aa-checkout-login">
+                                        <div id="registerBox" class="panel panel-default aa-checkout-login">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
@@ -101,13 +154,18 @@ function content_58dbc9ae94c5f6_63233853 (Smarty_Internal_Template $_smarty_tpl)
                                             </div>
                                             <div id="collapseThree" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <input type="text" placeholder="Login or email">
-                                                    <input type="password" placeholder="Password">
-                                                    <input type="password" placeholder="Repeat password">
-                                                    <button type="submit" class="aa-browse-btn">Registrate</button>
+                                                    <input type="text" id="email" name="email" value="" placeholder="Login or email">
+                                                    <input type="password" id="pwd1" name="pwd1" value="" placeholder="Password">
+                                                    <input type="password" id="pwd2" name="pwd2" value="" placeholder="Repeat password">
+                                                    <button type="submit" class="aa-browse-btn" onclick="registerNewUser();">Registrate</button>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <?php $_smarty_tpl->_assignInScope('buttonClass', "class='hidden'");
+?>
+                                        <?php }?>
+
                                     </div>
                                 </div>
                             </div>
@@ -132,9 +190,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
                                                 <tr>
                                                     <td>
-                                                        <a href="/product/<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-/"><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
-</a>
+                                                        <?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+
                                                         <span id="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 ">
                                                             <input type="hidden" name="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
@@ -144,8 +201,16 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 </strong>
                                                         </span>
                                                     </td>
+                                                    <td>
+                                                        <span id="itemRealPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+">
+                                                            <input type="hidden" name="itemRealPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['realPrice'];?>
+" />
+                                                            <?php echo $_smarty_tpl->tpl_vars['item']->value['realPrice'];?>
 
-                                                    <td>$150</td>
+                                                        </span>
+                                                    </td>
                                                 </tr>
                                             <?php
 }
@@ -158,7 +223,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                             <tfoot>
                                             <tr>
                                                 <th>Total</th>
-                                                <td>$785</td>
+                                                <td><?php echo $_smarty_tpl->tpl_vars['totalCost']->value;?>
+</td>
                                             </tr>
                                             </tfoot>
                                         </table>
@@ -168,7 +234,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                         <label for="cashdelivery"><input type="radio" id="cashdelivery" name="optionsRadios"> Cash on Delivery </label>
                                         <label for="paypal"><input type="radio" id="paypal" name="optionsRadios" checked> Via Paypal </label>
                                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
-                                        <input type="submit" value="Place Order" class="aa-browse-btn">
+                                        <input <?php echo $_smarty_tpl->tpl_vars['buttonClass']->value;?>
+ type="submit" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" onclick="saveOrder();">
                                     </div>
                                 </div>
                             </div>

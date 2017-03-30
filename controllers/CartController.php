@@ -135,10 +135,12 @@ function orderAction($smarty)
 
     // &$item - для того, чтобы можно было изменить значение элемента массива $rsProducts
     $i = 0;
+    $totalCost = 0;
     foreach ($rsProducts as &$item) {
         $item['cnt'] = isset($itemsCnt[$item['id']]) ? $itemsCnt[$item['id']] : 0;
         if($item['cnt']) {
             $item['realPrice'] = $item['cnt'] * $item['price'];
+            $totalCost += $item['realPrice'];
         } else {
             // Если товар в корзине есть, а количество расно 0, то удаляем этот товар
             unset($rsProducts[$i]);
@@ -161,6 +163,7 @@ function orderAction($smarty)
 
     $smarty->assign('Title', 'Order');
     $smarty->assign('rsProducts', $rsProducts);
+    $smarty->assign('totalCost', $totalCost);
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'order');
