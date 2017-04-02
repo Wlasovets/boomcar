@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-03-31 23:33:28
+  from "C:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58decb28148204_63980183',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '7755f114e18622342214fec818cd89398231803f' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
+      1 => 1490995997,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_58decb28148204_63980183 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!-- Cart view section -->
 <section id="checkout">
     <div class="container">
@@ -10,12 +34,14 @@
                                 <div class="checkout-left">
                                     <div class="panel-group" id="accordion">
 
-                                        {if isset($arUser)}
+                                        <?php if (isset($_smarty_tpl->tpl_vars['arUser']->value)) {?>
 
-                                        {$buttonClass = ""}
+                                        <?php $_smarty_tpl->_assignInScope('buttonClass', '');
+?>
 
                                         <!-- Shipping Address -->
-                                        <div id="orderUserInfoBox" {$buttonClass} class="panel panel-default aa-checkout-billaddress">
+                                        <div id="orderUserInfoBox" <?php echo $_smarty_tpl->tpl_vars['buttonClass']->value;?>
+ class="panel panel-default aa-checkout-billaddress">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
@@ -28,19 +54,22 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="text" placeholder="Name*" value="{$arUser['name']}">
+                                                                <input type="text" placeholder="Name*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['name'];?>
+">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="tel" placeholder="Phone*" value="{$arUser['phone']}">
+                                                                <input type="tel" placeholder="Phone*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['phone'];?>
+">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Address*">{$arUser['address']}</textarea>
+                                                                <textarea cols="8" rows="3" placeholder="Address*"><?php echo $_smarty_tpl->tpl_vars['arUser']->value['address'];?>
+</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -55,7 +84,7 @@
                                             </div>
                                         </div>
 
-                                        {else}
+                                        <?php } else { ?>
 
                                         <!-- Shipping Address -->
                                         <div class="panel panel-default aa-checkout-billaddress">
@@ -133,8 +162,9 @@
                                             </div>
                                         </div>
 
-                                        {$buttonClass = "class='hidden'"}
-                                        {/if}
+                                        <?php $_smarty_tpl->_assignInScope('buttonClass', "class='hidden'");
+?>
+                                        <?php }?>
 
                                     </div>
                                 </div>
@@ -152,29 +182,49 @@
                                             </thead>
                                             <tbody>
 
-                                            {foreach $rsProducts as $item name=products}
+                                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsProducts']->value, 'item', false, NULL, 'products', array (
+));
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+?>
                                                 <tr>
                                                     <td>
-                                                        {$item['name']}
-                                                        <span id="itemCnt_{$item['id']}">
-                                                            <input type="hidden" name="itemCnt_{$item['id']}" value="{$item['cnt']}" />
-                                                            <strong> x  {$item['cnt']}</strong>
+                                                        <?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+
+                                                        <span id="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+">
+                                                            <input type="hidden" name="itemCnt_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['cnt'];?>
+" />
+                                                            <strong> x  <?php echo $_smarty_tpl->tpl_vars['item']->value['cnt'];?>
+</strong>
                                                         </span>
                                                     </td>
                                                     <td>
-                                                        <span id="itemRealPrice_{$item['id']}">
-                                                            <input type="hidden" name="itemRealPrice_{$item['id']}" value="{$item['realPrice']}" />
-                                                            {$item['realPrice']}
+                                                        <span id="itemRealPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+">
+                                                            <input type="hidden" name="itemRealPrice_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['realPrice'];?>
+" />
+                                                            <?php echo $_smarty_tpl->tpl_vars['item']->value['realPrice'];?>
+
                                                         </span>
                                                     </td>
                                                 </tr>
-                                            {/foreach}
+                                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
 
                                             </tbody>
                                             <tfoot>
                                             <tr>
                                                 <th>Total</th>
-                                                <td>{$totalCost}</td>
+                                                <td><?php echo $_smarty_tpl->tpl_vars['totalCost']->value;?>
+</td>
                                             </tr>
                                             </tfoot>
                                         </table>
@@ -184,7 +234,8 @@
                                         <label for="cashdelivery"><input type="radio" id="cashdelivery" name="optionsRadios"> Cash on Delivery </label>
                                         <label for="paypal"><input type="radio" id="paypal" name="optionsRadios" checked> Via Paypal </label>
                                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
-                                        <input {$buttonClass} type="submit" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" onclick="saveOrder();">
+                                        <input <?php echo $_smarty_tpl->tpl_vars['buttonClass']->value;?>
+ type="submit" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" onclick="saveOrder();">
                                     </div>
                                 </div>
                             </div>
@@ -196,3 +247,5 @@
     </div>
 </section>
 <!-- / Cart view section -->
+<?php }
+}

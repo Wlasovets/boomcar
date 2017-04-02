@@ -175,7 +175,9 @@ function login(email, pwd) {
                 $('#logoutLink').show();
                 $('#userLink').attr('href', '/user/');
                 //$('#userLink').html(data['userName']);
-                $(location).attr('href', "/");
+                //$(location).attr('href', "/");
+
+                $('#btnSaveOrder').show();
 
             } else {
                 alert(data['message']);
