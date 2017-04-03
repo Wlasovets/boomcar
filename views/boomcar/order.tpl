@@ -133,7 +133,7 @@
                                             </div>
                                         </div>
 
-                                        {$buttonClass = "class='hidden'"}
+                                        {$buttonClass = "style='display: none'"}
                                         {/if}
 
                                     </div>

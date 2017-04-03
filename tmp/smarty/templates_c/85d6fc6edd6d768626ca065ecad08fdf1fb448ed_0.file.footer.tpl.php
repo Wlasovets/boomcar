@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-10 08:22:13
+/* Smarty version 3.1.30, created on 2017-03-31 12:05:17
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58748ba529f638_09230978',
+  'unifunc' => 'content_58de29dd0b71b7_85790012',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85d6fc6edd6d768626ca065ecad08fdf1fb448ed' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\footer.tpl',
-      1 => 1484029226,
+      1 => 1490954499,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58748ba529f638_09230978 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58de29dd0b71b7_85790012 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- footer -->
 <footer id="aa-footer">

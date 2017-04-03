@@ -171,10 +171,15 @@ function login(email, pwd) {
 
             if (data['success']) {
 
+                $('#registerBox').hide();
+                $('#loginBox').hide();
+                $('#btnSaveOrder').show();
+                //$('#collapseOne').attr('class', 'panel-collapse collapse in');
+
                 $('#loginLink').hide();
                 $('#logoutLink').show();
                 $('#userLink').attr('href', '/user/');
-                //$('#userLink').html(data['userName']);
+                $('#userLink').html(data['name']);
                 //$(location).attr('href', "/");
 
                 $('#btnSaveOrder').show();

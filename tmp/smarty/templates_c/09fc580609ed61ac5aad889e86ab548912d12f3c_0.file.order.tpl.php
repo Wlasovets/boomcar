@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-30 12:34:35
+/* Smarty version 3.1.30, created on 2017-04-03 17:33:50
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58dcdf3b5b8d82_18771094',
+  'unifunc' => 'content_58e26b5e7270e6_31472250',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09fc580609ed61ac5aad889e86ab548912d12f3c' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
-      1 => 1490870069,
+      1 => 1491233619,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58dcdf3b5b8d82_18771094 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58e26b5e7270e6_31472250 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="checkout">
@@ -139,7 +139,7 @@ function content_58dcdf3b5b8d82_18771094 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div class="panel-body">
                                                     <input type="text"id="loginEmail" name="loginEmail" placeholder="Login or email">
                                                     <input type="password" id="loginPwd" name="loginPwd" placeholder="Password">
-                                                    <button type="submit" class="aa-browse-btn" onclick="login();">Login</button>
+                                                    <input type="button" class="aa-browse-btn" value="Login" onclick="login('loginEmail', 'loginPwd');">
                                                 </div>
                                             </div>
                                         </div>
@@ -157,12 +157,12 @@ function content_58dcdf3b5b8d82_18771094 (Smarty_Internal_Template $_smarty_tpl)
                                                     <input type="text" id="email" name="email" value="" placeholder="Login or email">
                                                     <input type="password" id="pwd1" name="pwd1" value="" placeholder="Password">
                                                     <input type="password" id="pwd2" name="pwd2" value="" placeholder="Repeat password">
-                                                    <button type="submit" class="aa-browse-btn" onclick="registerNewUser();">Registrate</button>
+                                                    <input type="button" class="aa-browse-btn" value="Registrate" onclick="registerNewUser();">
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <?php $_smarty_tpl->_assignInScope('buttonClass', "class='hidden'");
+                                        <?php $_smarty_tpl->_assignInScope('buttonClass', "style='display: none'");
 ?>
                                         <?php }?>
 
