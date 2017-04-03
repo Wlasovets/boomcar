@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-31 23:33:28
+/* Smarty version 3.1.30, created on 2017-04-03 20:36:41
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58decb28148204_63980183',
+  'unifunc' => 'content_58e29639ec49c0_16311210',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7755f114e18622342214fec818cd89398231803f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
-      1 => 1490995997,
+      1 => 1491244584,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58decb28148204_63980183 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58e29639ec49c0_16311210 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="checkout">
@@ -162,7 +162,7 @@ function content_58decb28148204_63980183 (Smarty_Internal_Template $_smarty_tpl)
                                             </div>
                                         </div>
 
-                                        <?php $_smarty_tpl->_assignInScope('buttonClass', "class='hidden'");
+                                        <?php $_smarty_tpl->_assignInScope('buttonClass', "style='display: none'");
 ?>
                                         <?php }?>
 
