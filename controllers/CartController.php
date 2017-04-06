@@ -157,9 +157,9 @@ function orderAction($smarty)
     $_SESSION['saleCart'] = $rsProducts;
 
     // hideLoginBox - флаг для того, что бы спрятать блок авторизации
-    if(! isset($_SESSION['user'])) {
-        $smarty->assign('hideLoginBox', 1);
-    }
+    //if(! isset($_SESSION['user'])) {
+    //    $smarty->assign('hideLoginBox', 1);
+    //}
 
     $smarty->assign('Title', 'Order');
     $smarty->assign('rsProducts', $rsProducts);

@@ -139,8 +139,18 @@ function registerNewUser() {
                 $('#logoutLink').show();
                 $('#userLink').attr('href', '/user/');
                 $('#userLink').html(data['userName']);
-                $(location).attr('href', "/");
-                //alert('Регистрация прошла успешно');
+                $('#btnSaveOrder').show();
+                $('#login-modal').modal('hide');
+
+                if(document.location.pathname == '/user/account/') {
+                    $(location).attr('href', '/user/');
+                }
+
+                $('#registerBox').hide();
+                $('#loginBox').hide();
+                $('#btnSaveOrder').show();
+                $('#collapseOne').collapse('show');
+
             } else {
                 alert(data['message']);
             }
