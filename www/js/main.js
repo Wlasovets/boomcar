@@ -241,3 +241,25 @@ function updateUserData() {
         }
     });
 }
+
+/**
+ * Сохранение заказа
+ */
+function saveOrder() {
+    var postData = getData('#frmOrder');
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: "/cart/saveorder/",
+        data: postData,
+        dataType: 'json',
+        success: function(data){
+            if(data['success']){
+                alert(data['message']);
+                document.location = '/';
+            } else {
+                alert(data['message']);
+            }
+        }
+    });
+}

@@ -5,6 +5,8 @@
 
 // Подключаем модели
 include_once '../models/ProductsModel.php';
+include_once '../models/OrdersModel.php';
+include_once '../models/ParchaseModel.php';
 
 /**
  * @param int id GET параметр - ID добавляемого продукта в корзину
@@ -156,11 +158,6 @@ function orderAction($smarty)
     // Полученный массив покупаемых товаров помещаем в сессионную переменную
     $_SESSION['saleCart'] = $rsProducts;
 
-    // hideLoginBox - флаг для того, что бы спрятать блок авторизации
-    //if(! isset($_SESSION['user'])) {
-    //    $smarty->assign('hideLoginBox', 1);
-    //}
-
     $smarty->assign('Title', 'Order');
     $smarty->assign('rsProducts', $rsProducts);
     $smarty->assign('totalCost', $totalCost);
@@ -168,4 +165,40 @@ function orderAction($smarty)
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'order');
     loadTemplate($smarty, 'footer');
+}
+
+/**
+ * AJAX функция сохранения заказа
+ *
+ * @param array $_SESSION['saleCart'] массив покупаемых продуктов
+ * @return json информация о результате выполнения
+ */
+function saveorderAction()
+{
+    // получаем массив плкупаемых товаров
+    $cart = isset($_SESSION['saleCart']) ? $_SESSION['saleCart'] : null;
+
+    // если корзина пуста, то возвращаем ответ с ошибкой в формате json
+    if(!$cart) {
+        $resData['success'] = 0;
+        $resData['message'] = 'Нет товара для заказа';
+        echo json_encode($resData);
+        return;
+    }
+
+    // данные из формы
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+
+    // если данные в форме не заполнены, то возвращаем ответ с ошибкой в формате json
+    if(!$name || !$phone || !$address) {
+        $resData['success'] = 0;
+        $resData['message'] = 'Заполните все обязательные поля';
+        echo json_encode($resData);
+        return;
+    }
+
+    // создаем новый заказ и получаем его ID
+    $orderId = makeNewOrder($name,$phone, $address);
 }
