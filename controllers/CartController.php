@@ -200,5 +200,5 @@ function saveorderAction()
     }
 
     // создаем новый заказ и получаем его ID
-    $orderId = makeNewOrder($name,$phone, $address);
+    $orderId = makeNewOrder($name, $phone, $address);
 }

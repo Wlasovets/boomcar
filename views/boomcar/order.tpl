@@ -28,26 +28,26 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="text" placeholder="Name*" value="{$arUser['name']}">
+                                                                <input id="name" name="name" type="text" placeholder="Name*" value="{$arUser['name']}">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="tel" placeholder="Phone*" value="{$arUser['phone']}">
+                                                                <input id="phone" name="phone" type="tel" placeholder="Phone*" value="{$arUser['phone']}">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Address*">{$arUser['address']}</textarea>
+                                                                <textarea id="address" name="address" cols="8" rows="3" placeholder="Address*">{$arUser['address']}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Special Notes"></textarea>
+                                                                <textarea id="specnotes" name="specnotes" cols="8" rows="3" placeholder="Special Notes"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>

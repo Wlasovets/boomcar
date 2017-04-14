@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-03 17:33:50
+/* Smarty version 3.1.30, created on 2017-04-14 16:36:21
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58e26b5e7270e6_31472250',
+  'unifunc' => 'content_58f0de6516e363_42305145',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09fc580609ed61ac5aad889e86ab548912d12f3c' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
-      1 => 1491233619,
+      1 => 1492180402,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58e26b5e7270e6_31472250 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58f0de6516e363_42305145 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="checkout">
@@ -54,13 +54,13 @@ function content_58e26b5e7270e6_31472250 (Smarty_Internal_Template $_smarty_tpl)
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="text" placeholder="Name*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['name'];?>
+                                                                <input id="name" name="name" type="text" placeholder="Name*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['name'];?>
 ">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="tel" placeholder="Phone*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['phone'];?>
+                                                                <input id="phone" name="phone" type="tel" placeholder="Phone*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['phone'];?>
 ">
                                                             </div>
                                                         </div>
@@ -68,7 +68,7 @@ function content_58e26b5e7270e6_31472250 (Smarty_Internal_Template $_smarty_tpl)
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Address*"><?php echo $_smarty_tpl->tpl_vars['arUser']->value['address'];?>
+                                                                <textarea id="address" name="address" cols="8" rows="3" placeholder="Address*"><?php echo $_smarty_tpl->tpl_vars['arUser']->value['address'];?>
 </textarea>
                                                             </div>
                                                         </div>
@@ -76,7 +76,7 @@ function content_58e26b5e7270e6_31472250 (Smarty_Internal_Template $_smarty_tpl)
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Special Notes"></textarea>
+                                                                <textarea id="specnotes" name="specnotes" cols="8" rows="3" placeholder="Special Notes"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>

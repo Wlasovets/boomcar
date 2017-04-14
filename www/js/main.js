@@ -253,8 +253,8 @@ function saveOrder() {
         url: "/cart/saveorder/",
         data: postData,
         dataType: 'json',
-        success: function(data){
-            if(data['success']){
+        success: function(data) {
+            if(data['success']) {
                 alert(data['message']);
                 document.location = '/';
             } else {
