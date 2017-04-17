@@ -184,7 +184,7 @@
                                         <label for="cashdelivery"><input type="radio" id="cashdelivery" name="optionsRadios"> Cash on Delivery </label>
                                         <label for="paypal"><input type="radio" id="paypal" name="optionsRadios" checked> Via Paypal </label>
                                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
-                                        <input {$buttonClass} type="submit" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" onclick="saveOrder();">
+                                        <input {$buttonClass} type="button" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" onclick="saveOrder();">
                                     </div>
                                 </div>
                             </div>
