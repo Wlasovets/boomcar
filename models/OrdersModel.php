@@ -13,16 +13,16 @@ function makeNewOrder($name, $phone, $address, $specnotes)
 {
     //> Инициализация переменных
     $userId = $_SESSION['user']['id'];
-    $name = htmlspecialchars(mysql_real_escape_string($name));
-    $phone = htmlspecialchars(mysql_real_escape_string($phone));
-    $address = htmlspecialchars(mysql_real_escape_string($address));
-    $specnotes = trim($specnotes);
-    $specnotes = htmlspecialchars(mysql_real_escape_string($specnotes));
+    $name = htmlspecialchars(mysql_real_escape_string(trim($name)));
+    $phone = htmlspecialchars(mysql_real_escape_string(trim($phone)));
+    $address = htmlspecialchars(mysql_real_escape_string(trim($address)));
+    $specnotes = htmlspecialchars(mysql_real_escape_string(trim($specnotes)));
 
     $comment = "id пользователя: {$userId}<br />
                 Имя: {$name}<br />
                 Телефон: {$phone}<br />
-                Адрес: {$address}";
+                Адрес: {$address}<br />
+                Замечание пользователя: {$specnotes}";
 
     $dateCreated = date('Y.m.d H:m:s');
     $userIp = $_SERVER['REMOTE_ADDR'];
@@ -30,8 +30,8 @@ function makeNewOrder($name, $phone, $address, $specnotes)
 
     // формирование запроса к БД
     $sql = "INSERT INTO
-            orders (`user_id`, `date_created`, `date_payment`, `status`, `comment`, `user_ip`, `spec_note`)
-            VALUES ('{$userId}', '{$dateCreated}', null, '0', '{$comment}', '{$userIp}', '{$specnotes}')";
+            orders (`user_id`, `date_created`, `date_payment`, `status`, `comment`, `user_ip`)
+            VALUES ('{$userId}', '{$dateCreated}', null, '0', '{$comment}', '{$userIp}')";
 
     $rs = mysql_query($sql);
 
