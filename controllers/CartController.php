@@ -190,6 +190,7 @@ function saveorderAction()
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
+    $specnotes = $_POST['specnotes'];
 
     // если данные в форме не заполнены, то возвращаем ответ с ошибкой в формате json
     if(!$name || !$phone || !$address) {
@@ -200,7 +201,7 @@ function saveorderAction()
     }
 
     // создаем новый заказ и получаем его ID
-    $orderId = makeNewOrder($name, $phone, $address);
+    $orderId = makeNewOrder($name, $phone, $address, $specnotes);
 
     // если заказ не создан, то возвращаем ошибку
     if(!$orderId) {
