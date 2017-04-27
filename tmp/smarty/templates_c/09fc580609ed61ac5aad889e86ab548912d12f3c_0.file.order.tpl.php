@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-17 16:52:44
+/* Smarty version 3.1.30, created on 2017-04-27 15:53:29
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58f4d6bc1ab3f2_83986399',
+  'unifunc' => 'content_5901f7d981b320_66229834',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09fc580609ed61ac5aad889e86ab548912d12f3c' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
-      1 => 1492440745,
+      1 => 1493301129,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58f4d6bc1ab3f2_83986399 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5901f7d981b320_66229834 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="checkout">
@@ -235,7 +235,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                         <label for="paypal"><input type="radio" id="paypal" name="optionsRadios" checked> Via Paypal </label>
                                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
                                         <input <?php echo $_smarty_tpl->tpl_vars['buttonClass']->value;?>
- type="button" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" onclick="saveOrder();">
+ type="button" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" style="width: 100%;" onclick="saveOrder();">
                                     </div>
                                 </div>
                             </div>
