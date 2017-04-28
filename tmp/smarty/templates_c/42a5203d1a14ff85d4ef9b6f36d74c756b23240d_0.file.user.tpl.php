@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-17 07:25:03
+/* Smarty version 3.1.30, created on 2017-04-28 15:18:40
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\user.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58cb813f8583b8_44997044',
+  'unifunc' => 'content_59034130319753_94835447',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '42a5203d1a14ff85d4ef9b6f36d74c756b23240d' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\user.tpl',
-      1 => 1489563019,
+      1 => 1493385514,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58cb813f8583b8_44997044 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59034130319753_94835447 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="aa-myaccount">
@@ -55,15 +55,38 @@ function content_58cb813f8583b8_44997044 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                         <div class="col-md-6">
                             <div class="aa-myaccount-login">
-                                <h4>Login</h4>
+                                <h4>Orders</h4>
                                 <div class="aa-login-form">
-                                    <label for="">Username or Email address<span>*</span></label>
-                                    <input id="loginEmail" type="text" placeholder="Username or email">
-                                    <label for="">Password<span>*</span></label>
-                                    <input id="loginPwd" type="password" placeholder="Password">
-                                    <button type="submit" onclick="login('loginEmail', 'loginPwd');" class="aa-browse-btn">Login</button>
-                                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-                                    <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Order</th>
+                                            <th>Status</th>
+                                            <th>Pay date</th>
+                                            <th>Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td>Paid for</td>
+                                            <td>28.04.2017</td>
+                                            <td>$150</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td>Paid for</td>
+                                            <td>28.04.2017</td>
+                                            <td>$250</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td>Paid for</td>
+                                            <td>28.04.2017</td>
+                                            <td>$350</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

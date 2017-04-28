@@ -27,15 +27,38 @@
                         </div>
                         <div class="col-md-6">
                             <div class="aa-myaccount-login">
-                                <h4>Login</h4>
+                                <h4>Orders</h4>
                                 <div class="aa-login-form">
-                                    <label for="">Username or Email address<span>*</span></label>
-                                    <input id="loginEmail" type="text" placeholder="Username or email">
-                                    <label for="">Password<span>*</span></label>
-                                    <input id="loginPwd" type="password" placeholder="Password">
-                                    <button type="submit" onclick="login('loginEmail', 'loginPwd');" class="aa-browse-btn">Login</button>
-                                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-                                    <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Order</th>
+                                            <th>Status</th>
+                                            <th>Pay date</th>
+                                            <th>Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td>Paid for</td>
+                                            <td>28.04.2017</td>
+                                            <td>$150</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td>Paid for</td>
+                                            <td>28.04.2017</td>
+                                            <td>$250</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td>Paid for</td>
+                                            <td>28.04.2017</td>
+                                            <td>$350</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

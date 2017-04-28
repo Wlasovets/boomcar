@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-17 07:24:45
+/* Smarty version 3.1.30, created on 2017-04-28 14:42:52
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\registration.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58cb812d225512_45436542',
+  'unifunc' => 'content_590338cc8583b0_83448268',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5ae721b82e7d7af5bf94929cb16933168de4ca03' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\registration.tpl',
-      1 => 1489503443,
+      1 => 1493383366,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58cb812d225512_45436542 (Smarty_Internal_Template $_smarty_tpl) {
+function content_590338cc8583b0_83448268 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="aa-myaccount">
