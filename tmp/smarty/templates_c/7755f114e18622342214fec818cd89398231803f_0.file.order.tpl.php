@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-03 20:36:41
+/* Smarty version 3.1.30, created on 2017-05-01 15:23:22
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58e29639ec49c0_16311210',
+  'unifunc' => 'content_590736ca23e834_87918331',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7755f114e18622342214fec818cd89398231803f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
-      1 => 1491244584,
+      1 => 1493562672,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58e29639ec49c0_16311210 (Smarty_Internal_Template $_smarty_tpl) {
+function content_590736ca23e834_87918331 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="checkout">
@@ -54,13 +54,13 @@ function content_58e29639ec49c0_16311210 (Smarty_Internal_Template $_smarty_tpl)
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="text" placeholder="Name*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['name'];?>
+                                                                <input id="name" name="name" type="text" placeholder="Name*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['name'];?>
 ">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="aa-checkout-single-bill">
-                                                                <input type="tel" placeholder="Phone*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['phone'];?>
+                                                                <input id="phone" name="phone" type="tel" placeholder="Phone*" value="<?php echo $_smarty_tpl->tpl_vars['arUser']->value['phone'];?>
 ">
                                                             </div>
                                                         </div>
@@ -68,7 +68,7 @@ function content_58e29639ec49c0_16311210 (Smarty_Internal_Template $_smarty_tpl)
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Address*"><?php echo $_smarty_tpl->tpl_vars['arUser']->value['address'];?>
+                                                                <textarea id="address" name="address" cols="8" rows="3" placeholder="Address*"><?php echo $_smarty_tpl->tpl_vars['arUser']->value['address'];?>
 </textarea>
                                                             </div>
                                                         </div>
@@ -76,7 +76,7 @@ function content_58e29639ec49c0_16311210 (Smarty_Internal_Template $_smarty_tpl)
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="aa-checkout-single-bill">
-                                                                <textarea cols="8" rows="3" placeholder="Special Notes"></textarea>
+                                                                <textarea id="specnotes" name="specnotes" cols="8" rows="3" placeholder="Special Notes"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -235,7 +235,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                                         <label for="paypal"><input type="radio" id="paypal" name="optionsRadios" checked> Via Paypal </label>
                                         <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
                                         <input <?php echo $_smarty_tpl->tpl_vars['buttonClass']->value;?>
- type="submit" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" onclick="saveOrder();">
+ type="button" id="btnSaveOrder" value="Place Order" class="aa-browse-btn" style="width: 100%;" onclick="saveOrder();">
                                     </div>
                                 </div>
                             </div>

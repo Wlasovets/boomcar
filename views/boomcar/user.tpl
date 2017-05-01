@@ -29,36 +29,38 @@
                             <div class="aa-myaccount-login">
                                 <h4>Orders</h4>
                                 <div class="aa-login-form">
+
+                                    {if ! $rsUserOrders}
+                                        No orders
+                                    {else}
+
                                     <table class="table">
                                         <thead>
                                         <tr>
                                             <th>Order</th>
                                             <th>Status</th>
                                             <th>Pay date</th>
-                                            <th>Total</th>
+                                            <th>Information</th>
                                         </tr>
                                         </thead>
                                         <tbody>
+
+                                        {foreach $rsUserOrders as $item name=orders}
+
                                         <tr>
-                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
-                                            <td>Paid for</td>
-                                            <td>28.04.2017</td>
-                                            <td>$150</td>
+                                            <td><a href="#" onclick="showProducts('{$item['id']}'); return false;" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td>{$item['status']}</td>
+                                            <td>{$item['date_payment']}&nbsp;</td>
+                                            <td>{$item['comment']}</td>
                                         </tr>
-                                        <tr>
-                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
-                                            <td>Paid for</td>
-                                            <td>28.04.2017</td>
-                                            <td>$250</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
-                                            <td>Paid for</td>
-                                            <td>28.04.2017</td>
-                                            <td>$350</td>
-                                        </tr>
+
+                                        {/foreach}
+
                                         </tbody>
                                     </table>
+
+                                    {/if}
+
                                 </div>
                             </div>
                         </div>

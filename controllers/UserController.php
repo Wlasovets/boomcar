@@ -6,6 +6,8 @@
 
 // Подключаем модели
 include_once '../models/UsersModel.php';
+include_once '../models/OrdersModel.php';
+include_once '../models/PurchaseModel.php';
 
 /**
  * AJAX регистрация пользователя
@@ -129,7 +131,11 @@ function indexAction($smarty)
         redirect('/');
     }
 
+    // получить списко заказов пользователя
+    $rsUserOrders = getCurUserOrders();
+
     $smarty->assign('pageTitle', 'Страница пользователя');
+    $smarty->assign('rsUserOrders', $rsUserOrders);
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'user');

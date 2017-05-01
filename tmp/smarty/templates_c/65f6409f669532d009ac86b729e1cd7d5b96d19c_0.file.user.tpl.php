@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-16 19:04:39
+/* Smarty version 3.1.30, created on 2017-05-01 15:38:50
   from "C:\xampp\htdocs\boomcar.local\views\boomcar\user.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58cad3b747dbc3_43175136',
+  'unifunc' => 'content_59073a6ace9711_72827766',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '65f6409f669532d009ac86b729e1cd7d5b96d19c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\user.tpl',
-      1 => 1489677359,
+      1 => 1493645927,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58cad3b747dbc3_43175136 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59073a6ace9711_72827766 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="aa-myaccount">
@@ -55,15 +55,54 @@ function content_58cad3b747dbc3_43175136 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                         <div class="col-md-6">
                             <div class="aa-myaccount-login">
-                                <h4>Login</h4>
+                                <h4>Orders</h4>
                                 <div class="aa-login-form">
-                                    <label for="">Username or Email address<span>*</span></label>
-                                    <input id="loginEmail" type="text" placeholder="Username or email">
-                                    <label for="">Password<span>*</span></label>
-                                    <input id="loginPwd" type="password" placeholder="Password">
-                                    <button type="submit" onclick="login('loginEmail', 'loginPwd');" class="aa-browse-btn">Login</button>
-                                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-                                    <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+
+                                    <?php if (!$_smarty_tpl->tpl_vars['rsUserOrders']->value) {?>
+                                        No orders
+                                    <?php } else { ?>
+
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Order</th>
+                                            <th>Status</th>
+                                            <th>Pay date</th>
+                                            <th>Information</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsUserOrders']->value, 'item', false, NULL, 'orders', array (
+));
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+?>
+
+                                        <tr>
+                                            <td><a href="#" onclick="showProducts('<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+'); return false;" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['item']->value['status'];?>
+</td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['item']->value['date_payment'];?>
+&nbsp;</td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['item']->value['comment'];?>
+</td>
+                                        </tr>
+
+                                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+
+                                        </tbody>
+                                    </table>
+
+                                    <?php }?>
+
                                 </div>
                             </div>
                         </div>

@@ -6,7 +6,7 @@
 // Подключаем модели
 include_once '../models/ProductsModel.php';
 include_once '../models/OrdersModel.php';
-include_once '../models/ParchaseModel.php';
+include_once '../models/PurchaseModel.php';
 
 /**
  * @param int id GET параметр - ID добавляемого продукта в корзину
