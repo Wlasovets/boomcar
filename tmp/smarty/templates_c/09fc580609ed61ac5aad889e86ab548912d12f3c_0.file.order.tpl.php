@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-27 15:53:29
+/* Smarty version 3.1.30, created on 2017-05-26 08:36:27
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\order.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5901f7d981b320_66229834',
+  'unifunc' => 'content_5927ccebb34a72_04112282',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '09fc580609ed61ac5aad889e86ab548912d12f3c' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\order.tpl',
-      1 => 1493301129,
+      1 => 1493383087,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5901f7d981b320_66229834 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5927ccebb34a72_04112282 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="checkout">

@@ -222,7 +222,7 @@ function saveorderAction()
         unset($_SESSION['cart']);
     } else {
         $resData['success'] = 0;
-        $resData['message'] = 'Ошибка внесения данных для заказа ' . $orderId;
+        $resData['message'] = 'Ошибка внесения данных для заказа №' . $orderId;
     }
 
     echo json_encode($resData);
