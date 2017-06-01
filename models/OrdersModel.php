@@ -18,11 +18,13 @@ function makeNewOrder($name, $phone, $address, $specnotes)
     $address = htmlspecialchars(mysql_real_escape_string(trim($address)));
     $specnotes = htmlspecialchars(mysql_real_escape_string(trim($specnotes)));
 
-    $comment = "id пользователя: {$userId}<br />
-                Имя: {$name}<br />
+    $comment = "Имя: {$name}<br />
                 Телефон: {$phone}<br />
-                Адрес: {$address}<br />
-                Замечание пользователя: {$specnotes}";
+                Адрес: {$address}";
+
+    if(!empty($specnotes)) {
+        $comment = $comment . "<br /> Замечание пользователя: {$specnotes}";
+    }
 
     $dateCreated = date('Y.m.d H:m:s');
     $userIp = $_SERVER['REMOTE_ADDR'];
@@ -62,7 +64,12 @@ function getOrdersWithProductsByUser($userId)
     $smartyRs = array();
 
     while ($row = mysql_fetch_assoc($rs)) {
-        $smartyRs[] = $row;
+        $rsChildren = getPurchaseForOrder($row['id']);
+
+        if($rsChildren) {
+            $row['children'] = $rsChildren;
+            $smartyRs[] = $row;
+        }
     }
 
     return $smartyRs;

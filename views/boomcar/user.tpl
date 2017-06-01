@@ -48,11 +48,15 @@
                                         {foreach $rsUserOrders as $item name=orders}
 
                                         <tr>
-                                            <td><a href="#" onclick="showProducts('{$item['id']}'); return false;" style="color: #970001;">Order of 27.04.2017</a></td>
+                                            <td width="20%"><a href="#" onclick="showProducts('{$item['id']}'); return false;" style="color: #970001;">Order of {$item['date_created']}</a></td>
                                             <td>{$item['status']}</td>
                                             <td>{$item['date_payment']}&nbsp;</td>
                                             <td>{$item['comment']}</td>
                                         </tr>
+
+                                            <tr>
+
+                                            </tr>
 
                                         {/foreach}
 

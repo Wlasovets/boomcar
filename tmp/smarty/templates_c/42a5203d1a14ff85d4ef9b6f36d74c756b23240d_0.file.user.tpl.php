@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-28 15:18:40
+/* Smarty version 3.1.30, created on 2017-06-01 11:42:36
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\user.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59034130319753_94835447',
+  'unifunc' => 'content_592fe18c000009_39635323',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '42a5203d1a14ff85d4ef9b6f36d74c756b23240d' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\user.tpl',
-      1 => 1493385514,
+      1 => 1496310153,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59034130319753_94835447 (Smarty_Internal_Template $_smarty_tpl) {
+function content_592fe18c000009_39635323 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="aa-myaccount">
@@ -57,36 +57,53 @@ function content_59034130319753_94835447 (Smarty_Internal_Template $_smarty_tpl)
                             <div class="aa-myaccount-login">
                                 <h4>Orders</h4>
                                 <div class="aa-login-form">
+
+                                    <?php if (!$_smarty_tpl->tpl_vars['rsUserOrders']->value) {?>
+                                        No orders
+                                    <?php } else { ?>
+
                                     <table class="table">
                                         <thead>
                                         <tr>
                                             <th>Order</th>
                                             <th>Status</th>
                                             <th>Pay date</th>
-                                            <th>Total</th>
+                                            <th>Information</th>
                                         </tr>
                                         </thead>
                                         <tbody>
+
+                                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rsUserOrders']->value, 'item', false, NULL, 'orders', array (
+));
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+?>
+
                                         <tr>
-                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
-                                            <td>Paid for</td>
-                                            <td>28.04.2017</td>
-                                            <td>$150</td>
+                                            <td width="20%"><a href="#" onclick="showProducts('<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+'); return false;" style="color: #970001;">Order of <?php echo $_smarty_tpl->tpl_vars['item']->value['date_created'];?>
+</a></td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['item']->value['status'];?>
+</td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['item']->value['date_payment'];?>
+&nbsp;</td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['item']->value['comment'];?>
+</td>
                                         </tr>
-                                        <tr>
-                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
-                                            <td>Paid for</td>
-                                            <td>28.04.2017</td>
-                                            <td>$250</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#" style="color: #970001;">Order of 27.04.2017</a></td>
-                                            <td>Paid for</td>
-                                            <td>28.04.2017</td>
-                                            <td>$350</td>
-                                        </tr>
+
+                                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+
                                         </tbody>
                                     </table>
+
+                                    <?php }?>
+
                                 </div>
                             </div>
                         </div>
