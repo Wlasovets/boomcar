@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-06-01 11:42:36
+/* Smarty version 3.1.30, created on 2017-06-02 16:48:27
   from "D:\xampp\htdocs\boomcar.local\views\boomcar\user.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_592fe18c000009_39635323',
+  'unifunc' => 'content_59317abbe11135_51623521',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '42a5203d1a14ff85d4ef9b6f36d74c756b23240d' => 
     array (
       0 => 'D:\\xampp\\htdocs\\boomcar.local\\views\\boomcar\\user.tpl',
-      1 => 1496310153,
+      1 => 1496414900,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_592fe18c000009_39635323 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59317abbe11135_51623521 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Cart view section -->
 <section id="aa-myaccount">
@@ -91,6 +91,44 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
                                             <td><?php echo $_smarty_tpl->tpl_vars['item']->value['comment'];?>
 </td>
                                         </tr>
+
+                                            <tr style="display: none" id="purchasesForOrderId_<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+">
+                                                <td colspan="4">
+
+                                                        <table class="table" width="100%">
+                                                            <tr>
+                                                                <th>Название</th>
+                                                                <th>Цена</th>
+                                                                <th>Количество</th>
+                                                            </tr>
+
+                                                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['item']->value['children'], 'itemChild', false, NULL, 'products', array (
+));
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['itemChild']->value) {
+?>
+                                                                <tr>
+                                                                    <td><a href="/product/<?php echo $_smarty_tpl->tpl_vars['itemChild']->value['product_id'];?>
+/"><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['name'];?>
+</a></td>
+                                                                    <td><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['price'];?>
+</td>
+                                                                    <td><?php echo $_smarty_tpl->tpl_vars['itemChild']->value['amount'];?>
+</td>
+                                                                </tr>
+                                                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+
+                                                        </table>
+                                                    
+                                                </td>
+                                            </tr>
 
                                         <?php
 }
