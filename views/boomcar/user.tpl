@@ -56,16 +56,18 @@
 
                                             <tr style="display: none" id="purchasesForOrderId_{$item['id']}">
                                                 <td colspan="4">
-                                                    {if($item['children'])}
-                                                        <table class="table" width="100%">
+
+                                                        <table style="background-color: #d3d3d3" class="table" width="100%">
                                                             <tr>
-                                                                <th>Название</th>
-                                                                <th>Цена</th>
-                                                                <th>Количество</th>
+                                                                <th>№</th>
+                                                                <th>Name</th>
+                                                                <th>Price</th>
+                                                                <th>Amount</th>
                                                             </tr>
 
                                                             {foreach $item['children'] as $itemChild name=products}
                                                                 <tr>
+                                                                    <td>{$smarty.foreach.products.iteration}</td>
                                                                     <td><a href="/product/{$itemChild['product_id']}/">{$itemChild['name']}</a></td>
                                                                     <td>{$itemChild['price']}</td>
                                                                     <td>{$itemChild['amount']}</td>
@@ -73,7 +75,7 @@
                                                             {/foreach}
 
                                                         </table>
-                                                    {/if}
+
                                                 </td>
                                             </tr>
 
